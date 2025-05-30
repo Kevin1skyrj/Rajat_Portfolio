@@ -1,9 +1,15 @@
 import React from 'react'
+import Navbar from './components/Header/Navbar'
 
-const Homepage = () => {
+const App = () => {
   return (
-    <div>Homepage</div>
+   <>
+   <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+  <Navbar />
+
+</div>
+   </>
   )
 }
 
-export default Homepage
+export default App
