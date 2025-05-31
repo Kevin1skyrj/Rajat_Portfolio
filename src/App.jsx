@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Header/Navbar'
 import Footer from './components/Footer/Footer'
+import ParticleBackground from './components/ParticlesBg/ParticleBackground'
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
       <main className="flex-grow pt-16">
         <p className="text-center text-xl">Welcome to my portfolio!</p>
       </main>
+
+      <ParticleBackground />
 
       <Footer />
     </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <img
-            src="./MyLogo1.gif"
+            src="./logo2.0.png"
             alt="Logo"
             className="w-50 h-50 object-contain" 
           />
