@@ -91,7 +91,7 @@ animation: nahuel61920 3s ease-in-out infinite;
 }
 }
 
-.heading{
+/* .heading{
     text-align: center;
     padding-bottom: 3rem;
     margin-top: 5rem;
@@ -105,7 +105,7 @@ animation: nahuel61920 3s ease-in-out infinite;
 
 /**botones**/
 
- .custom-btn {
+ /* .custom-btn {
     text-align: center;
     justify-items: center;
     max-width: 18rem;
@@ -177,8 +177,8 @@ body.dark .btn::after {
 
 .btn-codigo:hover{
     background: var(--black);
-    color: var(--white);
-}
+    color: var(--white); */
+
 
 /* .cv{
     text-align: center;

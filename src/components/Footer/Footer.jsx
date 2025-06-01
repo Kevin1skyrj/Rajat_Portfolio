@@ -10,7 +10,7 @@ const Footer = () => {
         
         <div className="text-center md:text-left text-sm">
           <p>
-            <p>Page created by Rajat Pandey</p>
+            <span>Page created by Rajat Pandey</span>
 
           </p>
           <p>&copy; {year}. All Rights Reserved.</p>

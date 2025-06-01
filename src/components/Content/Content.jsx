@@ -1,72 +1,112 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import ParticleHeaderBg from '../ParticlesBg/ParticleHeader/ParticleHeaderBg';
+import React from "react";
+import { Link } from "react-scroll";
+import ParticleHeaderBg from "../ParticlesBg/ParticleHeader/ParticleHeaderBg";
+import { motion } from "framer-motion";
+const textVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  }),
+};
 
 const Content = () => (
   <div className="relative w-screen h-screen bg-black overflow-hidden">
     <ParticleHeaderBg />
 
     <section id="inicio" className="flex justify-center items-center h-full">
-      <div className="text-center z-20 mt-40 px-4">
-        <p className="text-white text-4xl font-semibold mb-2">Hello</p>
-        <h1 className="text-cyan-500 text-5xl font-bold mb-2">
+      <div className="text-center z-20 mt-10 px-4">
+        <motion.p
+          className="text-white text-4xl font-semibold mb-2"
+          initial="hidden"
+          animate="visible"
+          custom={0}
+          variants={textVariants}
+        >
+          Hello
+        </motion.p>
+        <motion.h1
+          className="text-[#00e5fe] text-5xl font-bold mb-2"
+          initial="hidden"
+          animate="visible"
+          custom={1}
+          variants={textVariants}
+        >
           I am Rajat Pandey
-        </h1>
-        <p className="text-white text-3xl font-medium mb-6">
+        </motion.h1>
+        <motion.p
+          className="text-white text-3xl font-medium mb-6"
+          initial="hidden"
+          animate="visible"
+          custom={2}
+          variants={textVariants}
+        >
           Full-stack developer
-        </p>
+        </motion.p>
+        <div className="flex flex-wrap justify-center gap-6 mb-8">
+          {/* LinkedIn */}
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center bg-[#00e5fe] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#0077b5] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+          >
+            <div className="flex items-center justify-center w-12 h-12 mx-2">
+              <i className="fab fa-linkedin-in text-2xl" />
+            </div>
+            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
+              LinkedIn
+            </span>
+          </a>
 
-        <div className="hidden sm:flex justify-center gap-6 mb-8">
+          {/* GitHub */}
           <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#4267B2] transition-all duration-300"
+            className="group flex items-center bg-[#00e5fe] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#333] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
-            <i className="fab fa-linkedin text-xl mr-3" />
-            <span>LinkedIn</span>
+            <div className="flex items-center justify-center w-12 h-12 mx-2">
+              <i className="fab fa-github text-2xl" />
+            </div>
+            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
+              GitHub
+            </span>
           </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#333] transition-all duration-300"
-          >
-            <i className="fab fa-github text-xl mr-3" />
-            <span>GitHub</span>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#E1306C] transition-all duration-300"
-          >
-            <i className="fab fa-instagram text-xl mr-3" />
-            <span>Instagram</span>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#4fc35b] transition-all duration-300"
-          >
-            <i className="fab fa-whatsapp text-xl mr-3" />
-            <span>WhatsApp</span>
-          </a>
-        </div>
 
-        <div className="flex sm:hidden justify-center gap-6 text-white text-2xl mb-10">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin" />
+          {/* Instagram */}
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center bg-[#00e5fe] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#E1306C] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+          >
+            <div className="flex items-center justify-center w-12 h-12 mx-2">
+              <i className="fab fa-instagram text-2xl" />
+            </div>
+            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
+              Instagram
+            </span>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-whatsapp" />
+
+          {/* WhatsApp */}
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center bg-[#00e5fe] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#4fc35b] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+          >
+            <div className="flex items-center justify-center w-12 h-12 mx-2">
+              <i className="fab fa-whatsapp text-2xl" />
+            </div>
+            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
+              WhatsApp
+            </span>
           </a>
         </div>
 

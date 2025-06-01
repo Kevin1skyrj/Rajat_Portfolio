@@ -93,11 +93,13 @@ const ParticleBackground = () => {
   if (!init) return null;
 
   return (
+    <div className="fixed inset-0 -z-10 pointer-events-none">
     <Particles
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
     />
+    </div>
   );
 };
 
