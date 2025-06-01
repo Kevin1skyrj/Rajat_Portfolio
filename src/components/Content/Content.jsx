@@ -1,15 +1,15 @@
 import React from 'react';
-// import ParticleHeaderBg from '../ParticlesBg/ParticlesHeader/ParticleHeaderBg';
 import { Link } from 'react-scroll';
+import ParticleHeaderBg from '../ParticlesBg/ParticleHeader/ParticleHeaderBg';
 
 const Content = () => (
   <div className="relative w-screen h-screen bg-black overflow-hidden">
-    {/* <ParticleHeaderBg /> */}
+    <ParticleHeaderBg />
 
     <section id="inicio" className="flex justify-center items-center h-full">
       <div className="text-center z-20 mt-40 px-4">
         <p className="text-white text-4xl font-semibold mb-2">Hello</p>
-        <h1 className="text-green-500 text-5xl font-bold mb-2">
+        <h1 className="text-cyan-500 text-5xl font-bold mb-2">
           I am Rajat Pandey
         </h1>
         <p className="text-white text-3xl font-medium mb-6">
@@ -21,7 +21,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#4267B2] transition-all duration-300"
+            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#4267B2] transition-all duration-300"
           >
             <i className="fab fa-linkedin text-xl mr-3" />
             <span>LinkedIn</span>
@@ -30,7 +30,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#333] transition-all duration-300"
+            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#333] transition-all duration-300"
           >
             <i className="fab fa-github text-xl mr-3" />
             <span>GitHub</span>
@@ -39,7 +39,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#E1306C] transition-all duration-300"
+            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#E1306C] transition-all duration-300"
           >
             <i className="fab fa-instagram text-xl mr-3" />
             <span>Instagram</span>
@@ -48,7 +48,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#4fc35b] transition-all duration-300"
+            className="flex items-center px-6 py-3 bg-cyan-500 text-white rounded-full shadow-md hover:bg-[#4fc35b] transition-all duration-300"
           >
             <i className="fab fa-whatsapp text-xl mr-3" />
             <span>WhatsApp</span>

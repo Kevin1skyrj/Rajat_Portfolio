@@ -14,6 +14,7 @@ const Main = () => {
       <Projects/>
 
       <Contacts/>
+      
     </div>
   )
 }

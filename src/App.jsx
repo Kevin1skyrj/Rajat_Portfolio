@@ -1,12 +1,12 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react';
+import "./App.css";
+import Homepage from './pages/Home/Homepage';
+// import RouterScrollTop from './components/ScroolTop/RouterScroolTop';
 // import router 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Homepage from './pages/Home/Homepage';
-
 // created router
 const router = createBrowserRouter([
   { path: "/", element: <Homepage /> },
@@ -14,10 +14,27 @@ const router = createBrowserRouter([
 ])
 
 const App = () => {
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+  const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
+   return (
+    <>
+      
+      {loading ? (
+        <div className='loading-pag'>
+          <div className="loader">
+            <span>=(Rajat Pandey)=</span>
+            <span>=(Rajat Pandey)=</span>
+          </div>
+        </div>
+      ) : (
+        <RouterProvider router={router} />
+      )}
+    </>
   )
 }
 
