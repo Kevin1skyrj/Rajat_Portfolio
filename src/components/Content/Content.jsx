@@ -10,7 +10,7 @@ const Content = () => (
       <div className="text-center z-20 mt-40 px-4">
         <p className="text-white text-4xl font-semibold mb-2">Hello</p>
         <h1 className="text-green-500 text-5xl font-bold mb-2">
-          I am Nahuel Carrizo
+          I am Rajat Pandey
         </h1>
         <p className="text-white text-3xl font-medium mb-6">
           Full-stack developer
@@ -18,7 +18,7 @@ const Content = () => (
 
         <div className="hidden sm:flex justify-center gap-6 mb-8">
           <a
-            href="https://www.linkedin.com/in/esteban-nahuel-carrizo-69715422b/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#4267B2] transition-all duration-300"
@@ -27,7 +27,7 @@ const Content = () => (
             <span>LinkedIn</span>
           </a>
           <a
-            href="https://github.com/Nahuel61920/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#333] transition-all duration-300"
@@ -36,7 +36,7 @@ const Content = () => (
             <span>GitHub</span>
           </a>
           <a
-            href="https://www.instagram.com/nahuelcarrizolc/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#E1306C] transition-all duration-300"
@@ -45,7 +45,7 @@ const Content = () => (
             <span>Instagram</span>
           </a>
           <a
-            href="https://api.whatsapp.com/send?phone=5493815360966"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-[#4fc35b] transition-all duration-300"
@@ -56,16 +56,16 @@ const Content = () => (
         </div>
 
         <div className="flex sm:hidden justify-center gap-6 text-white text-2xl mb-10">
-          <a href="https://www.linkedin.com/in/esteban-nahuel-carrizo-69715422b/" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin" />
           </a>
-          <a href="https://github.com/Nahuel61920/" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github" />
           </a>
-          <a href="https://www.instagram.com/nahuelcarrizolc/" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=5493815360966" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-whatsapp" />
           </a>
         </div>
