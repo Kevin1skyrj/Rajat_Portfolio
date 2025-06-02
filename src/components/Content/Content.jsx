@@ -20,7 +20,7 @@ const Content = () => (
     <ParticleHeaderBg />
 
     <section id="inicio" className="flex justify-center items-center h-full">
-      <div className="text-center z-20 mt-10 px-4">
+      <div className="text-center z-20 mt-40 px-4">
         <motion.p
           className="text-white text-4xl font-semibold mb-2"
           initial="hidden"
@@ -111,7 +111,7 @@ const Content = () => (
         </div>
 
         <Link to="sobre-mi" smooth duration={500}>
-          <div className="h-12 w-8 border-2 border-white mx-auto rounded-full relative cursor-pointer animate-bounce">
+          <div className="h-12 w-8 border-2 border-white mx-auto mt-50 rounded-full relative cursor-pointer animate-bounce">
             <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45"></div>
             <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45 opacity-60"></div>
           </div>

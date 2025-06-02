@@ -6,7 +6,7 @@ import Contacts from './Contacts'
 
 const Main = () => {
   return (
-    <div className='relative z-0'>
+    <div className='relative  '>
       <About/>
 
       <Services/>
