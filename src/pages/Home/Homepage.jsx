@@ -1,28 +1,27 @@
-import React from 'react'
-import Navbar from '../../components/Header/Navbar'
-import ParticleBackground from '../../components/ParticlesBg/ParticleBackground'
-import Content from '../../components/Content/Content'
-import Footer from '../../components/Footer/Footer'
-import ScroolToTop from '../../components/ScroolTop/ScroolToTop'
-import Main from '../../components/Main/Main'
+import React from "react";
+import Navbar from "../../components/Header/Navbar";
+import ParticleBackground from "../../components/ParticlesBg/ParticleBackground";
+import Content from "../../components/Content/Content";
+import Footer from "../../components/Footer/Footer";
+import ScroolToTop from "../../components/ScroolTop/ScroolToTop";
+import Main from "../../components/Main/Main";
 
 const Homepage = () => {
   return (
-    <div  className='relative z-0'>
-      <Navbar className="relative z-10" />
+    <div className="relative z-0">
+      <Navbar />
 
-      <ParticleBackground className="relative z-10" />
-      
-      <Content className="relative z-10" />
+      {/* <ParticleBackground /> */}
 
-      <Main className="relative z-10" />
+      <Content />
 
-      <ScroolToTop className="relative z-10" />
+      <Main />
 
-      <Footer className="relative z-10" />
-        
+      <ScroolToTop />
+
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

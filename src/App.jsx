@@ -8,11 +8,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 // created router
-const router = createBrowserRouter([
-  { path: "/", element: <Homepage /> },
+const router = createBrowserRouter(
+  [
+  {
+   path: "/",
+   element: <Homepage /> 
+  },
   
-  
-])
+  ]
+
+)
 
 const App = () => {
   const [loading, setLoading] = useState(true);
