@@ -34,6 +34,15 @@ html, body {
   overflow-x: hidden;
 }
 
+@keyframes marquee {
+  0% { transform: translateX(100%);}
+  100% { transform: translateX(-100%);}
+}
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 18s linear infinite;
+}
+
  :root{
     --green:#00e5fe;
     --secundario: #15b8ca;

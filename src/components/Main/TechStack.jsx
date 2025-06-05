@@ -1,68 +1,158 @@
+import { motion } from "framer-motion";
 export default function TechStack() {
   const technologies = [
     {
       category: "Frontend",
       items: [
-        { name: "HTML5", icon: "/placeholder.svg?height=80&width=80", color: "bg-orange-100 dark:bg-orange-900/20" },
-        { name: "CSS3", icon: "/placeholder.svg?height=80&width=80", color: "bg-blue-100 dark:bg-blue-900/20" },
+        {
+          name: "HTML5",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-orange-100 dark:bg-orange-900/20",
+        },
+        {
+          name: "CSS3",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-blue-100 dark:bg-blue-900/20",
+        },
         {
           name: "JavaScript",
           icon: "/placeholder.svg?height=80&width=80",
           color: "bg-yellow-100 dark:bg-yellow-900/20",
         },
-        { name: "React", icon: "/placeholder.svg?height=80&width=80", color: "bg-cyan-100 dark:bg-cyan-900/20" },
-        { name: "Tailwind CSS", icon: "/placeholder.svg?height=80&width=80", color: "bg-teal-100 dark:bg-teal-900/20" },
-        { name: "Vite", icon: "/placeholder.svg?height=80&width=80", color: "bg-purple-100 dark:bg-purple-900/20" },
+        {
+          name: "React",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-cyan-100 dark:bg-cyan-900/20",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-teal-100 dark:bg-teal-900/20",
+        },
+        {
+          name: "Vite",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-purple-100 dark:bg-purple-900/20",
+        },
       ],
     },
     {
       category: "Backend",
       items: [
-        { name: "Node.js", icon: "/placeholder.svg?height=80&width=80", color: "bg-green-100 dark:bg-green-900/20" },
-        { name: "Express", icon: "/placeholder.svg?height=80&width=80", color: "bg-gray-100 dark:bg-gray-700/30" },
-        { name: "MongoDB", icon: "/placeholder.svg?height=80&width=80", color: "bg-green-100 dark:bg-green-900/20" },
-        { name: "Firebase", icon: "/placeholder.svg?height=80&width=80", color: "bg-amber-100 dark:bg-amber-900/20" },
+        {
+          name: "Node.js",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-green-100 dark:bg-green-900/20",
+        },
+        {
+          name: "Express",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-gray-100 dark:bg-gray-700/30",
+        },
+        {
+          name: "MongoDB",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-green-100 dark:bg-green-900/20",
+        },
+        {
+          name: "Firebase",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-amber-100 dark:bg-amber-900/20",
+        },
       ],
     },
     {
       category: "Tools & Others",
       items: [
-        { name: "Git", icon: "/placeholder.svg?height=80&width=80", color: "bg-red-100 dark:bg-red-900/20" },
-        { name: "GitHub", icon: "/placeholder.svg?height=80&width=80", color: "bg-gray-100 dark:bg-gray-700/30" },
-        { name: "VS Code", icon: "/placeholder.svg?height=80&width=80", color: "bg-blue-100 dark:bg-blue-900/20" },
-        { name: "Figma", icon: "/placeholder.svg?height=80&width=80", color: "bg-purple-100 dark:bg-purple-900/20" },
-        { name: "Netlify", icon: "/placeholder.svg?height=80&width=80", color: "bg-teal-100 dark:bg-teal-900/20" },
-        { name: "Vercel", icon: "/placeholder.svg?height=80&width=80", color: "bg-gray-100 dark:bg-gray-700/30" },
+        {
+          name: "Git",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-red-100 dark:bg-red-900/20",
+        },
+        {
+          name: "GitHub",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-gray-100 dark:bg-gray-700/30",
+        },
+        {
+          name: "VS Code",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-blue-100 dark:bg-blue-900/20",
+        },
+        {
+          name: "Figma",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-purple-100 dark:bg-purple-900/20",
+        },
+        {
+          name: "Netlify",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-teal-100 dark:bg-teal-900/20",
+        },
+        {
+          name: "Vercel",
+          icon: "/placeholder.svg?height=80&width=80",
+          color: "bg-gray-100 dark:bg-gray-700/30",
+        },
       ],
     },
-  ]
+  ];
 
   return (
-    <section id="tech-stack" className="py-20 bg-white dark:bg-gray-900 techstack-section">
+    <section
+      id="tech-stack"
+      className="py-20 bg-gradient-to-br from-[#15e2e5] via-white to-[#232946] dark:from-[#232946] dark:via-[#111] dark:to-[#15e2e5]"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Tech Stack</h2>
-          <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            My Tech Stack
+          </motion.h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            These are the technologies, frameworks, and tools I work with to build modern web applications.
+            These are the technologies, frameworks, and tools I work with to
+            build modern web applications.
           </p>
         </div>
 
         <div className="space-y-16 max-w-6xl mx-auto">
           {technologies.map((tech, index) => (
             <div key={index}>
-              <h3 className="text-2xl font-bold mb-8 text-center">{tech.category}</h3>
+              <h3 className="text-2xl font-bold mb-8 text-center dark:text-white">
+                {tech.category}
+              </h3>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
                 {tech.items.map((item, i) => (
-                  <div key={i} className="flex flex-col items-center">
+                  <motion.div
+                    key={i}
+                    className="flex flex-col items-center group"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
+                    whileHover={{ scale: 1.08 }}
+                    viewport={{ once: true }}
+                  >
                     <div
-                      className={`w-20 h-20 ${item.color} rounded-xl flex items-center justify-center mb-3 shadow-sm`}
+                      className={`w-20 h-20 ${item.color} rounded-xl flex items-center justify-center mb-3 shadow-sm group-hover:shadow-[0_0_16px_4px_rgba(21,226,229,0.25)] transition-shadow duration-300`}
+                      
                     >
-                      <img src={item.icon || "/placeholder.svg"} alt={item.name} className="w-10 h-10" />
+                      <img
+                        src={item.icon || "/placeholder.svg"}
+                        alt={item.name}
+                        className="w-10 h-10"
+                      />
                     </div>
-                    <span className="font-medium">{item.name}</span>
-                  </div>
+                    <span className="font-medium bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent">
+                      {item.name}
+                    </span>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -71,7 +161,9 @@ export default function TechStack() {
 
         {/* Experience Bar */}
         <div className="mt-20 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-8 text-center">Experience Level</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center">
+            Experience Level
+          </h3>
 
           <div className="space-y-6">
             {[
@@ -80,22 +172,37 @@ export default function TechStack() {
               { name: "UI/UX Design", level: 65 },
               { name: "Mobile Development", level: 60 },
             ].map((skill, index) => (
-              <div key={index} className="space-y-2">
+              <motion.div
+                key={index}
+                className="space-y-2"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
                 <div className="flex justify-between">
                   <span className="font-medium">{skill.name}</span>
-                  <span className="text-[#15e2e5] font-semibold">{skill.level}%</span>
+                  <span className="text-[#15e2e5] font-semibold">
+                    {skill.level}%
+                  </span>
                 </div>
                 <div className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#15e2e5] to-cyan-400 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
+                  <motion.div
+                    className="h-full rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
+                    style={{
+                      background:
+                        "linear-gradient(90deg, #15e2e5 0%, #4fc35b 50%, #232946 100%)",
+                    }}
+                  />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

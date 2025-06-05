@@ -42,10 +42,10 @@ export default function Contacts() {
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4 ">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Get In Touch</h2>
           <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach
@@ -56,7 +56,7 @@ export default function Contacts() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-bold mb-6 dark:text-white">Contact Information</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               Feel free to reach out to me for any inquiries, project
               discussions, or just to say hello. I'm always open to new
@@ -69,7 +69,7 @@ export default function Contacts() {
                   <Mail className="w-5 h-5 text-[#15e2e5]" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1">Email</h4>
+                  <h4 className="text-lg font-semibold mb-1 dark:text-white">Email</h4>
                   <a
                     href="mailto:hello@example.com"
                     className="text-gray-600 dark:text-gray-400 hover:text-[#15e2e5] dark:hover:text-cyan-500 transition-colors"
@@ -84,7 +84,7 @@ export default function Contacts() {
                   <Phone className="w-5 h-5 text-[#15e2e5]" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1">Phone</h4>
+                  <h4 className="text-lg font-semibold mb-1 dark:text-white">Phone</h4>
                   <a
                     href="tel:+1234567890"
                     className="text-gray-600 dark:text-gray-400 hover:text-[#15e2e5] dark:hover:text-cyan-500 transition-colors"
@@ -99,7 +99,7 @@ export default function Contacts() {
                   <MapPin className="w-5 h-5 text-[#15e2e5]" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1">Location</h4>
+                  <h4 className="text-lg font-semibold mb-1 dark:text-white">Location</h4>
                   <p className="text-gray-600 dark:text-gray-400">
                     New York City, NY, United States
                   </p>
@@ -109,7 +109,7 @@ export default function Contacts() {
 
             {/* Social Media Links */}
             <div className="mt-10">
-              <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
+              <h4 className="text-lg font-semibold mb-4 dark:text-white">Connect With Me</h4>
               <div className="flex space-x-4">
                 {[
                   {

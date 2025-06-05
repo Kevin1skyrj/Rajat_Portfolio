@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import MarqueeLine from "../ScrollGradientLine";
+import ScrollGradientLine from "../ScrollGradientLine";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,6 +10,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-[#111] text-white w-full fixed top-0 z-50 shadow-md ">
+      <ScrollGradientLine />
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
         {/* Logo */}
         <div className="flex-shrink-0">

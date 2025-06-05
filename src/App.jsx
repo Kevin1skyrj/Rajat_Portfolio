@@ -1,52 +1,49 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import "./App.css";
-import Homepage from './pages/Home/Homepage';
-// import RouterScrollTop from './components/ScroolTop/RouterScroolTop';
-// import router 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import About from './components/Main/About';
-import Projects from './components/Main/Projects';
-import Contacts from './components/Main/Contacts';
+import Homepage from "./pages/Home/Homepage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/Main/About";
+import Projects from "./components/Main/Projects";
+import Contacts from "./components/Main/Contacts";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // created router
-const router = createBrowserRouter(
-  [
-  {
-   path: "/",
-   element: <Homepage /> 
-  },
-  {
-   path: "/About",
-   element: <About /> 
-  },
-   {
-   path: "/Projects",
-   element: <Projects />
-  },
-   {
-   path: "/Contacts",
-   element: <Contacts />
-  },
-  
-  ]
 
-)
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage />,
+  },
+  {
+    path: "/About",
+    element: <About />,
+  },
+  {
+    path: "/Projects",
+    element: <Projects />,
+  },
+  {
+    path: "/Contacts",
+    element: <Contacts />,
+  },
+]);
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+  useEffect(() => {
+    AOS.init({ once: false, duration: 800 });
+  }, []);
+
+  useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
 
-   return (
+  return (
     <>
-      
       {loading ? (
-        <div className='loading-pag'>
+        <div className="loading-pag">
           <div className="loader">
             <span>=(Rajat Pandey)=</span>
             <span>=(Rajat Pandey)=</span>
@@ -56,16 +53,10 @@ const App = () => {
         <RouterProvider router={router} />
       )}
     </>
-  )
-}
+  );
+};
 
-export default App
-
-
-
-
-
-
+export default App;
 
 // import React from 'react'
 // import Navbar from './components/Header/Navbar'

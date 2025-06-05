@@ -9,9 +9,11 @@ import Main from "../../components/Main/Main";
 const Homepage = () => {
   return (
     <div className="relative z-0">
+      
+
       <Navbar />
 
-      {/* <ParticleBackground /> */}
+      <ParticleBackground />
 
       <Content />
 
