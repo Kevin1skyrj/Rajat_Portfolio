@@ -13,7 +13,7 @@ const Homepage = () => {
 
       <Navbar />
 
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
 
       <Content />
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const [filter, setFilter] = useState("all");
@@ -79,11 +80,22 @@ export default function Projects() {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-950 projects-section">
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-br from-[#15e2e5] via-white to-[#232946] dark:from-[#232946] dark:via-[#111] dark:to-[#15e2e5]"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
-          <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            My Projects
+          </motion.h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Check out some of my recent work and personal projects that showcase
             my skills and expertise.
@@ -112,9 +124,14 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <div
+            <motion.div
               key={project.id}
               className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg group"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.04, boxShadow: "0px 4px 24px #15e2e580" }}
+              viewport={{ once: true }}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
@@ -148,7 +165,7 @@ export default function Projects() {
 
               {/* Project Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                   {project.description}
                 </p>
@@ -158,7 +175,7 @@ export default function Projects() {
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full"
+                      className="px-3 py-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] text-white text-xs font-medium rounded-full"
                     >
                       {tech}
                     </span>
@@ -174,19 +191,20 @@ export default function Projects() {
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* View All Projects Button */}
         <div className="text-center mt-12">
-          <a
+          <motion.a
             href="#"
             className="inline-flex items-center px-6 py-3 bg-[#15e2e5] hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
+            whileHover={{ scale: 1.07 }}
           >
             View All Projects
             <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>

@@ -160,7 +160,7 @@ export default function TechStack() {
         </div>
 
         {/* Experience Bar */}
-        <div className="mt-20 max-w-4xl mx-auto">
+        <div className="mt-20 max-w-4xl mx-auto dark:text-white">
           <h3 className="text-2xl font-bold mb-8 text-center">
             Experience Level
           </h3>
