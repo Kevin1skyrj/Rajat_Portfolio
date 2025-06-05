@@ -12,9 +12,9 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <img
-            src="./logo2.0.png"
+            src="./logo1.0.png"
             alt="Logo"
-            className="w-50 h-50 object-contain" 
+            className="w-30 h-23 object-contain" 
           />
         </div>
 
@@ -22,31 +22,31 @@ const Navbar = () => {
         <nav className="hidden md:flex flex-1 justify-center items-center gap-10 font-semibold text-base">
           <a
             href="#home"
-            className="hover:text-cyan-400 border-b-2 border-transparent hover:border-cyan-400 transition"
+            className="hover:text-[#15e2e5] border-b-2 border-transparent hover:border-[#15e2e5] transition"
           >
             Home
           </a>
           <a
             href="#about-me"
-            className="hover:text-cyan-400 border-b-2 border-transparent hover:border-cyan-400 transition"
+            className="hover:text-[#15e2e5] border-b-2 border-transparent hover:border-[#15e2e5] transition"
           >
             About Me
           </a>
           <a
             href="#services"
-            className="hover:text-cyan-400 border-b-2 border-transparent hover:border-cyan-400 transition"
+            className="hover:text-[#15e2e5] border-b-2 border-transparent hover:border-[#15e2e5] transition"
           >
             Services
           </a>
           <a
             href="#projects"
-            className="hover:text-cyan-400 border-b-2 border-transparent hover:border-cyan-400 transition"
+            className="hover:text-[#15e2e5] border-b-2 border-transparent hover:border-[#15e2e5] transition"
           >
             Projects
           </a>
           <a
             href="#contacts"
-            className="hover:text-cyan-400 border-b-2 border-transparent hover:border-cyan-400 transition"
+            className="hover:text-[#15e2e5] border-b-2 border-transparent hover:border-[#15e2e5] transition"
           >
             Contacts
           </a>
@@ -61,19 +61,19 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <nav className="md:hidden bg-[#111] text-white px-4 pb-4 pt-2 space-y-2 font-medium">
-          <a href="#home" className="block hover:text-cyan-400">
+          <a href="#home" className="block hover:text-[#15e2e5]">
             Home
           </a>
-          <a href="#about-me" className="block hover:text-cyan-400">
+          <a href="#about-me" className="block hover:text-[#15e2e5]">
             About Me
           </a>
-          <a href="#services" className="block hover:text-cyan-400">
+          <a href="#services" className="block hover:text-[#15e2e5]">
             Services
           </a>
-          <a href="#projects" className="block hover:text-cyan-400">
+          <a href="#projects" className="block hover:text-[#15e2e5]">
             Projects
           </a>
-          <a href="#contacts" className="block hover:text-cyan-400">
+          <a href="#contacts" className="block hover:text-[#15e2e5]">
             Contacts
           </a>
         </nav>
