@@ -82,7 +82,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-br from-[#15e2e5] via-white to-[#232946] dark:from-[#232946] dark:via-[#111] dark:to-[#15e2e5]"
+      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">

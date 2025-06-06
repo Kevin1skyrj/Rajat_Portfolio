@@ -101,7 +101,7 @@ export default function TechStack() {
   return (
     <section
       id="tech-stack"
-      className="py-20 bg-gradient-to-br from-[#15e2e5] via-white to-[#232946] dark:from-[#232946] dark:via-[#111] dark:to-[#15e2e5]"
+      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -141,7 +141,6 @@ export default function TechStack() {
                   >
                     <div
                       className={`w-20 h-20 ${item.color} rounded-xl flex items-center justify-center mb-3 shadow-sm group-hover:shadow-[0_0_16px_4px_rgba(21,226,229,0.25)] transition-shadow duration-300`}
-                      
                     >
                       <img
                         src={item.icon || "/placeholder.svg"}
@@ -149,7 +148,7 @@ export default function TechStack() {
                         className="w-10 h-10"
                       />
                     </div>
-                    <span className="font-medium bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent">
+                    <span className="font-medium dark:text-white text-black bg-clip-text ">
                       {item.name}
                     </span>
                   </motion.div>
@@ -194,7 +193,7 @@ export default function TechStack() {
                     transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
                     style={{
                       background:
-                        "linear-gradient(90deg, #15e2e5 0%, #4fc35b 50%, #232946 100%)",
+                        "linear-gradient(90deg, #15e2e5 0%, #38bdf8 50%, #6366f1 100%)",
                     }}
                   />
                 </div>

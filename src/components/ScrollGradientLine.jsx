@@ -21,7 +21,7 @@ const ScrollGradientLine = () => {
         className="h-full"
         style={{
           width: `${scrollPercent}%`,
-          background: "linear-gradient(90deg, #15e2e5 0%, #232946 100%)",
+          background: "linear-gradient(cyan, #15e2e5)",
           transition: "width 0.2s linear",
         }}
       />

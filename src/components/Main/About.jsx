@@ -4,7 +4,8 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 bg-gradient-to-br from-[#15e2e5] via-white to-[#232946] dark:from-[#232946] dark:via-[#111] dark:to-[#15e2e5]"
+      // Palette 1: Modern Minimal
+      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -26,11 +27,9 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Image Column */}
             <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800"
-              
-              >
+              <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800">
                 <img
-                  src="/placeholder.svg?height=600&width=600"
+                  src="src/assets/projects/services-bg6.jpg?height=600&width=600"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

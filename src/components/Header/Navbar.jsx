@@ -68,10 +68,10 @@ const Navbar = () => {
           <a href="#home" className="block hover:text-[#15e2e5]">
             Home
           </a>
-          <a href="#about-me" className="block hover:text-[#15e2e5]">
+          <a href="#about" className="block hover:text-[#15e2e5]">
             About Me
           </a>
-          <a href="#services" className="block hover:text-[#15e2e5]">
+          <a href="#skills" className="block hover:text-[#15e2e5]">
             Services
           </a>
           <a href="#projects" className="block hover:text-[#15e2e5]">

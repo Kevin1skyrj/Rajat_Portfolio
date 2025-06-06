@@ -43,7 +43,10 @@ export default function Contacts() {
   };
 
   return (
-    <section id="contacts" className="py-20 bg-white dark:bg-gray-900">
+    <section
+      id="contacts"
+      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
+    >
       <div className="container mx-auto px-4 ">
         <div className="text-center mb-16">
           <motion.h2
@@ -132,7 +135,7 @@ export default function Contacts() {
             <div className="flex flex-wrap justify-center gap-6 mt-20 ">
               {/* Gmail */}
               <a
-                href="mailto:estebancarrizo619@gmail.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group"
@@ -153,7 +156,7 @@ export default function Contacts() {
               </a>
               {/* WhatsApp */}
               <a
-                href="https://api.whatsapp.com/send?phone=5493815360966"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group"
@@ -174,7 +177,7 @@ export default function Contacts() {
               </a>
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/nahuelcarrizolc/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group"
@@ -195,7 +198,7 @@ export default function Contacts() {
               </a>
               {/* Telegram */}
               <a
-                href="https://t.me/estebanU20"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group"
@@ -216,7 +219,7 @@ export default function Contacts() {
               </a>
               {/* Linkedin */}
               <a
-                href="https://www.linkedin.com/in/esteban-nahuel-carrizo-69715422b/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group"
@@ -237,7 +240,7 @@ export default function Contacts() {
               </a>
               {/* GitHub */}
               <a
-                href="https://github.com/Nahuel61920/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group"
@@ -360,7 +363,7 @@ export default function Contacts() {
                 className={`w-full flex items-center justify-center px-6 py-3 rounded-lg text-white font-medium transition-colors duration-300 ${
                   isSubmitting
                     ? "bg-cyan-400 cursor-not-allowed"
-                    : "bg-gradient-to-r from-[#15e2e5] to-[#232946] hover:from-[#232946] hover:to-[#15e2e5]"
+                    : "bg-gradient-to-r from-[#15e2e5] to-[#06b6d4] hover:from-[#06b6d4] hover:to-[#15e2e5]"
                 }`}
               >
                 {isSubmitting ? (
