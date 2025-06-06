@@ -10,7 +10,7 @@ export default function Projects() {
       id: 1,
       title: "E-Commerce Dashboard",
       category: "web",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "src/assets/projects/meme-generator.jpg?height=400&width=600",
       description:
         "A comprehensive dashboard for e-commerce businesses with analytics and inventory management.",
       technologies: ["React", "Tailwind CSS", "Chart.js", "Firebase"],
@@ -21,7 +21,7 @@ export default function Projects() {
       id: 2,
       title: "Social Media App",
       category: "mobile",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "src/assets/projects/test.png?height=400&width=600",
       description:
         "A social networking platform with real-time messaging and content sharing capabilities.",
       technologies: ["React Native", "Node.js", "Socket.io", "MongoDB"],
@@ -32,7 +32,7 @@ export default function Projects() {
       id: 3,
       title: "Portfolio Website",
       category: "web",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "src/assets/projects/personal-dashboard.png?height=400&width=600",
       description:
         "A modern portfolio website showcasing projects and skills with a clean, responsive design.",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
@@ -43,7 +43,7 @@ export default function Projects() {
       id: 4,
       title: "Task Management Tool",
       category: "web",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "src/assets/projects/tenzies.jpg?height=400&width=600",
       description:
         "A productivity app for managing tasks, projects, and team collaboration.",
       technologies: ["React", "Redux", "Express", "PostgreSQL"],
@@ -54,7 +54,7 @@ export default function Projects() {
       id: 5,
       title: "Weather Forecast App",
       category: "mobile",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "src/assets/projects/restaurant-menu.jpg?height=400&width=600",
       description:
         "A weather application providing real-time forecasts and weather alerts for multiple locations.",
       technologies: ["React Native", "Weather API", "Geolocation", "Redux"],
@@ -65,7 +65,7 @@ export default function Projects() {
       id: 6,
       title: "Blog Platform",
       category: "web",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "src/assets/projects/experiences.png?height=400&width=600",
       description:
         "A content management system for creating and publishing blog posts with user authentication.",
       technologies: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],

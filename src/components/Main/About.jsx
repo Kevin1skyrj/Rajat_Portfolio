@@ -14,7 +14,7 @@ export default function About() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-br from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white">
               About Me
             </h2>
             <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>

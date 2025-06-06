@@ -18,6 +18,7 @@ const Navbar = () => {
             src="./logo1.0.png"
             alt="Logo"
             className="w-30 h-23 object-contain" 
+            
           />
         </div>
 
@@ -30,16 +31,16 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="#about-me"
+            href="#about"
             className="hover:text-[#15e2e5] border-b-2 border-transparent hover:border-[#15e2e5] transition"
           >
             About Me
           </a>
           <a
-            href="#services"
+            href="#skills"
             className="hover:text-[#15e2e5] border-b-2 border-transparent hover:border-[#15e2e5] transition"
           >
-            Services
+            Skills
           </a>
           <a
             href="#projects"

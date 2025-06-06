@@ -16,7 +16,7 @@ const textVariants = {
 };
 
 const Content = () => (
-  <div className="relative w-screen h-screen bg-black overflow-hidden">
+  <div id="home" className="relative w-screen h-screen bg-black overflow-hidden">
     <ParticleHeaderBg />
 
     <section id="inicio" className="flex justify-center items-center h-full">
@@ -56,7 +56,7 @@ const Content = () => (
             rel="noopener noreferrer"
             className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#0077b5] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
-            <div className="flex items-center justify-center w-12 h-12 mx-3">
+            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-linkedin-in text-2xl" />
             </div>
             <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
@@ -71,7 +71,7 @@ const Content = () => (
             rel="noopener noreferrer"
             className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#333] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
-            <div className="flex items-center justify-center w-12 h-12 mx-3">
+            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-github text-2xl" />
             </div>
             <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
@@ -86,7 +86,7 @@ const Content = () => (
             rel="noopener noreferrer"
             className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#E1306C] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
-            <div className="flex items-center justify-center w-12 h-12 mx-3">
+            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-instagram text-2xl" />
             </div>
             <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
@@ -101,7 +101,7 @@ const Content = () => (
             rel="noopener noreferrer"
             className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#4fc35b] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
-            <div className="flex items-center justify-center w-12 h-12 mx-3">
+            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-whatsapp text-2xl" />
             </div>
             <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
