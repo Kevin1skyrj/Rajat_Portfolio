@@ -114,6 +114,17 @@ animation: nahuel61920 3s ease-in-out infinite;
   }
 }
 
+.icon-3d {
+  transition: 
+    transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+  will-change: transform;
+}
+.icon-3d-hover {
+  transform: perspective(600px) rotateY(25deg) scale(1.15) translateY(-8px);
+  box-shadow: 0 8px 32px 0 rgba(21, 226, 229, 0.18);
+}
+
 /* .heading{
     text-align: center;
     padding-bottom: 3rem;

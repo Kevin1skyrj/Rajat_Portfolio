@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import ParticleHeaderBg from "../ParticlesBg/ParticleHeader/ParticleHeaderBg";
 import { motion } from "framer-motion";
+
 const textVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i) => ({
@@ -17,7 +18,11 @@ const textVariants = {
 
 const Content = () => (
   <div id="home" className="relative w-screen h-screen bg-black overflow-hidden">
-    <ParticleHeaderBg />
+     {/* Particle Background */}
+    <div className="absolute h-screen w-full overflow-hidden">
+      <ParticleHeaderBg />
+    </div>
+
 
     <section id="inicio" className="flex justify-center items-center h-full">
       <div className="text-center z-20 mt-40 px-4">
