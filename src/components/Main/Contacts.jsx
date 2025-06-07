@@ -44,19 +44,6 @@ export default function Contacts() {
 
   return (
     <>
-      {/* 3D Icon Hover Style */}
-      <style>
-        {`
-    .icon-3d {
-      transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
-      will-change: transform;
-    }
-    .group:hover .icon-3d {
-      transform: perspective(600px) rotateY(25deg) scale(1.15) translateY(-8px);
-      box-shadow: 0 8px 32px 0 rgba(21,226,229,0.18);
-    }
-  `}
-      </style>
       <section
         id="contacts"
         className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
@@ -259,7 +246,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-black text-black bg-white dark:bg-gray-900 transition-transform duration-300 text-2xl icon-3d">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-black text-black bg-white dark:bg-gray-900 transition-transform duration-300 group-hover:rotate-12 text-2xl">
                     {/* GitHub SVG */}
                     <svg
                       className="w-7 h-7"
