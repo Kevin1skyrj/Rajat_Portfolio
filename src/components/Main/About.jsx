@@ -29,7 +29,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800">
                 <img
-                  src="src/assets/projects/services-bg6.jpg?height=600&width=600"
+                  src="/projects/services-bg6.jpg?height=600&width=600"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
