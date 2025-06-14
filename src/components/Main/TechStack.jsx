@@ -6,12 +6,12 @@ export default function TechStack() {
       items: [
         {
           name: "HTML5",
-          icon: "src/assets/techstack icons/html5.svg?height=80&width=80",
+          icon: "/techstack icons/html5.svg?height=80&width=80",
           color: "bg-orange-100 dark:bg-orange-900/20",
         },
         {
           name: "CSS3",
-          icon: "src/assets/techstack icons/css3.svg?height=80&width=80",
+          icon: "/techstack icons/css3.svg?height=80&width=80",
           color: "bg-blue-100 dark:bg-blue-900/20",
         },
         {
@@ -21,17 +21,17 @@ export default function TechStack() {
         },
         {
           name: "React",
-          icon: "src/assets/techstack icons/react.svg?height=80&width=80",
+          icon: "/techstack icons/react.svg?height=80&width=80",
           color: "bg-cyan-100 dark:bg-cyan-900/20",
         },
         {
           name: "Tailwind CSS",
-          icon: "src/assets/techstack icons/tailwindcss.svg?height=80&width=80",
+          icon: "/techstack icons/tailwindcss.svg?height=80&width=80",
           color: "bg-teal-100 dark:bg-teal-900/20",
         },
         {
           name: "Vite",
-          icon: "src/assets/techstack icons/vite.svg?height=80&width=80",
+          icon: "/techstack icons/vite.svg?height=80&width=80",
           color: "bg-purple-100 dark:bg-purple-900/20",
         },
       ],
@@ -41,7 +41,7 @@ export default function TechStack() {
       items: [
         {
           name: "Node.js",
-          icon: "src/assets/techstack icons/nodejs.svg?height=80&width=80",
+          icon: "/techstack icons/nodejs.svg?height=80&width=80",
           color: "bg-green-100 dark:bg-green-900/20",
         },
         {
@@ -51,12 +51,12 @@ export default function TechStack() {
         },
         {
           name: "MongoDB",
-          icon: "src/assets/techstack icons/mongo.svg?height=80&width=80",
+          icon: "/techstack icons/mongo.svg?height=80&width=80",
           color: "bg-green-100 dark:bg-green-900/20",
         },
         {
           name: "Firebase",
-          icon: "src/assets/techstack icons/firebase.svg?height=80&width=80",
+          icon: "/techstack icons/firebase.svg?height=80&width=80",
           color: "bg-amber-100 dark:bg-amber-900/20",
         },
       ],
@@ -71,12 +71,12 @@ export default function TechStack() {
         },
         {
           name: "GitHub",
-          icon: "src/assets/techstack icons/github.svg?height=80&width=80",
+          icon: "/techstack icons/github.svg?height=80&width=80",
           color: "bg-gray-100 dark:bg-gray-700/30",
         },
         {
           name: "VS Code",
-          icon: "src/assets/techstack icons/vs-code.svg?height=80&width=80",
+          icon: "/techstack icons/vs-code.svg?height=80&width=80",
           color: "bg-blue-100 dark:bg-blue-900/20",
         },
         {
@@ -91,7 +91,7 @@ export default function TechStack() {
         },
         {
           name: "Vercel",
-          icon: "src/assets/techstack icons/vercel.svg?height=80&width=80",
+          icon: "/techstack icons/vercel.svg?height=80&width=80",
           color: "bg-gray-100 dark:bg-gray-700/30",
         },
       ],
