@@ -16,7 +16,7 @@ export default function TechStack() {
         },
         {
           name: "JavaScript",
-          icon: "src/assets/techstack icons/javascript.svg?height=80&width=80",
+          icon: "/techstack icons/javascript.svg?height=80&width=80",
           color: "bg-yellow-100 dark:bg-yellow-900/20",
         },
         {
@@ -46,7 +46,7 @@ export default function TechStack() {
         },
         {
           name: "Express",
-          icon: "src/assets/techstack icons/express.svg?height=80&width=80",
+          icon: "/techstack icons/express.svg?height=80&width=80",
           color: "bg-gray-100 dark:bg-gray-700/30",
         },
         {
@@ -66,7 +66,7 @@ export default function TechStack() {
       items: [
         {
           name: "Git",
-          icon: "src/assets/techstack icons/git-icon.svg?height=80&width=80",
+          icon: "/techstack icons/git-icon.svg?height=80&width=80",
           color: "bg-red-100 dark:bg-red-900/20",
         },
         {
@@ -81,12 +81,12 @@ export default function TechStack() {
         },
         {
           name: "Figma",
-          icon: "src/assets/techstack icons/figma.svg?height=80&width=80",
+          icon: "/techstack icons/figma.svg?height=80&width=80",
           color: "bg-purple-100 dark:bg-purple-900/20",
         },
         {
           name: "Netlify",
-          icon: "src/assets/techstack icons/netlify.svg?height=80&width=80",
+          icon: "/techstack icons/netlify.svg?height=80&width=80",
           color: "bg-teal-100 dark:bg-teal-900/20",
         },
         {
