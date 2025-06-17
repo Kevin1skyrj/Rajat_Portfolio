@@ -11,6 +11,7 @@ export default function Services() {
       { name: "CSS3", level: 85 },
       { name: "JavaScript", level: 80 },
       { name: "React", level: 85 },
+      { name: "Next.js", level: 80 },
       { name: "Tailwind CSS", level: 80 },
     ],
     backend: [
@@ -95,15 +96,16 @@ export default function Services() {
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                  <div
-                    className="h-2.5 rounded-full"
+                  <motion.div
+                    className="h-full rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
                     style={{
-                      width: `${skill.level}%`,
                       background:
-                        "linear-gradient(90deg, #15e2e5 0%, #232946 100%)",
-                      transition: "width 1s",
+                        "linear-gradient(90deg, #15e2e5 0%, #38bdf8 50%, #6366f1 100%)",
                     }}
-                  ></div>
+                  />
                 </div>
               </motion.div>
             ))}
@@ -148,7 +150,9 @@ export default function Services() {
               >
                 {item.icon}
               </div>
-              <h3 className="font-medium text-black dark:text-white">{item.label}</h3>
+              <h3 className="font-medium text-black dark:text-white">
+                {item.label}
+              </h3>
             </motion.div>
           ))}
         </div>
