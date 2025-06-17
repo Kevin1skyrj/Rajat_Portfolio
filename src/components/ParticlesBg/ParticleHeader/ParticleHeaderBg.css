@@ -4,13 +4,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 0; /* Make sure this is lower than your content */
+  z-index: 0;
   overflow: hidden;
-}
-
-.header-banner-image {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
 }

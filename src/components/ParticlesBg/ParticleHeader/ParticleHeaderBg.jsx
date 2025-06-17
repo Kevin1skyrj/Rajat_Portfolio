@@ -1,7 +1,7 @@
 import React from "react";
 
 const ParticleHeaderBg = () => (
-  <div className="absolute inset-0 w-full h-full z-0">
+  <div className="header-banner-bg absolute inset-0 w-full h-full z-0">
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"

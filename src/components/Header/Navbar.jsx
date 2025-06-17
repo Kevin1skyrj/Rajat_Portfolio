@@ -3,6 +3,8 @@ import { Menu, X } from "lucide-react";
 import MarqueeLine from "../ScrollGradientLine";
 import ScrollGradientLine from "../ScrollGradientLine";
 
+
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,14 +15,15 @@ const Navbar = () => {
       <ScrollGradientLine />
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <img
-            src="./logo1.0.png"
-            alt="Logo"
-            className="w-30 h-23 object-contain" 
-            
-          />
-        </div>
+        <a href="#home">
+          <div className="flex-shrink-0">
+            <img
+              src="./logo1.0.png"
+              alt="Logo"
+              className="w-30 h-23 object-contain"
+            />
+          </div>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-1 justify-center items-center gap-10 font-semibold text-base">
@@ -54,6 +57,12 @@ const Navbar = () => {
           >
             Contacts
           </a>
+          {/* <button
+            onClick={toggleTheme}
+            className="text-sm bg-gray-200 dark:bg-gray-600 text-black dark:text-white px-3 py-1 rounded"
+          >
+            {isDark ? "Light Mode" : "Dark Mode"}
+          </button> */}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -72,7 +81,7 @@ const Navbar = () => {
             About Me
           </a>
           <a href="#skills" className="block hover:text-[#15e2e5]">
-            Services
+            Skills
           </a>
           <a href="#projects" className="block hover:text-[#15e2e5]">
             Projects
@@ -82,7 +91,6 @@ const Navbar = () => {
           </a>
         </nav>
       )}
-      
     </header>
   );
 };
