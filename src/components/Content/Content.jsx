@@ -19,13 +19,13 @@ const textVariants = {
 const Content = () => (
   <div id="home" className="relative w-screen h-screen bg-black overflow-hidden">
      {/* Particle Background */}
-    <div className="absolute h-screen w-full overflow-hidden">
-      <ParticleHeaderBg />
-    </div>
+    <div className="absolute inset-0 z-0">
+  <ParticleHeaderBg />
+</div>
 
 
-    <section id="inicio" className="flex justify-center items-center h-full">
-      <div className="text-center z-20 mt-40 px-4">
+    <section id="inicio" className="flex justify-center items-center h-full relative z-10">
+      <div className="text-center z-0 mt-40 px-4">
         <motion.p
           className="text-white text-4xl font-semibold mb-2"
           initial="hidden"

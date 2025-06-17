@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Header/Navbar";
-import ParticleBackground from "../../components/ParticlesBg/ParticleBackground";
+
 import Content from "../../components/Content/Content";
 import Footer from "../../components/Footer/Footer";
 import ScroolToTop from "../../components/ScroolTop/ScroolToTop";
