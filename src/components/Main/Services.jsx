@@ -39,15 +39,15 @@ export default function Services() {
   return (
     <section
       id="skills"
-      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
+      className="py-20 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-cyan-400 dark:from-[#15e2e5] dark:to-white">
             My Skills
           </h2>
           <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-200 font-mono  max-w-2xl mx-auto">
             Here are my technical skills and proficiencies that I've developed
             over the years.
           </p>
@@ -150,7 +150,7 @@ export default function Services() {
               >
                 {item.icon}
               </div>
-              <h3 className="font-medium text-black dark:text-white">
+              <h3 className="font-medium text-white ">
                 {item.label}
               </h3>
             </motion.div>

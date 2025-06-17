@@ -142,12 +142,12 @@ export default function ThreeBackground() {
     <div
   ref={mountRef}
   style={{
-    position: "absolute",
+    position: "fixed",
     top: 0,
     left: 0,
     width: "10%",
     height: "10%",
-    zIndex: 10, // Try 0 instead of -1 to debug
+    zIndex:0, // Try 0 instead of -1 to debug
     backgroundColor: "#000", // Helps test if div is visible
     pointerEvents: "none", // Prevents interfering with UI clicks
   }}

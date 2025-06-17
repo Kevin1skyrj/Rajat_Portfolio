@@ -101,12 +101,12 @@ export default function TechStack() {
   return (
     <section
       id="tech-stack"
-      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
+      className="py-20 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white"
+            className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-cyan-400 dark:from-[#15e2e5] dark:to-white"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -115,7 +115,7 @@ export default function TechStack() {
             My Tech Stack
           </motion.h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-200 font-mono  max-w-2xl mx-auto">
             These are the technologies, frameworks, and tools I work with to
             build modern web applications.
           </p>
@@ -124,7 +124,7 @@ export default function TechStack() {
         <div className="space-y-16 max-w-6xl mx-auto">
           {technologies.map((tech, index) => (
             <div key={index}>
-              <h3 className="text-2xl font-bold mb-8 text-center dark:text-white">
+              <h3 className="text-2xl font-bold mb-8 text-center text-white">
                 {tech.category}
               </h3>
 
@@ -148,7 +148,7 @@ export default function TechStack() {
                         className="w-10 h-10"
                       />
                     </div>
-                    <span className="font-medium dark:text-white text-black bg-clip-text ">
+                    <span className="font-medium text-white bg-clip-text ">
                       {item.name}
                     </span>
                   </motion.div>
@@ -159,7 +159,7 @@ export default function TechStack() {
         </div>
 
         {/* Experience Bar */}
-        <div className="mt-20 max-w-4xl mx-auto dark:text-white">
+        <div className="mt-20 max-w-4xl mx-auto text-white">
           <h3 className="text-2xl font-bold mb-8 text-center">
             Experience Level
           </h3>

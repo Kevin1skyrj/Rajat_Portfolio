@@ -7,7 +7,7 @@ import TechStack from './TechStack'
 
 const Main = () => {
   return (
-    <div className='relative  '>
+    <div className='relative '>
       <About/>
 
       <Services/>

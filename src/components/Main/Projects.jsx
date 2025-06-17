@@ -82,12 +82,12 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
+      className="py-20 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white"
+            className="text-3xl md:text-4xl font-bold mb-4 text-cyan-400 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text  dark:from-[#15e2e5] dark:to-white"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -96,7 +96,7 @@ export default function Projects() {
             My Projects
           </motion.h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className=" text-gray-200 font-mono max-w-2xl mx-auto">
             Check out some of my recent work and personal projects that showcase
             my skills and expertise.
           </p>

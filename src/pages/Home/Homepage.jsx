@@ -5,11 +5,12 @@ import Content from "../../components/Content/Content";
 import Footer from "../../components/Footer/Footer";
 import ScroolToTop from "../../components/ScroolTop/ScroolToTop";
 import Main from "../../components/Main/Main";
+import ThreeBackground from "../../components/ParticlesBg/ThreeBackground";
 
 const Homepage = () => {
   return (
     <div className="relative z-0">
-      
+      <ThreeBackground />
 
       <Navbar />
 

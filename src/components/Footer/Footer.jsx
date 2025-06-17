@@ -1,19 +1,16 @@
-import React from 'react';
-
+import React from "react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-8 mt-0">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 ">
-        
+    <footer className="relative z-10 bg-transparent text-white py-8">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         <div className="text-center md:text-left text-sm">
           <p>
             <span>Page created by Rajat Pandey</span>
-
           </p>
-          <p>&copy; {year}. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()}. All Rights Reserved.</p>
         </div>
 
         <div className="flex space-x-10 text-4xl">
@@ -50,7 +47,6 @@ const Footer = () => {
             <i className="fab fa-whatsapp"></i>
           </a>
         </div>
-
       </div>
     </footer>
   );

@@ -5,7 +5,7 @@ export default function About() {
     <section
       id="about"
       // Palette 1: Modern Minimal
-      className="py-20 bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#cbd5e1] dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
+      className="py-20 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -15,11 +15,11 @@ export default function About() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-br from-[#15e2e5] to-[#232946] bg-clip-text text-transparent dark:from-[#15e2e5] dark:to-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-br from-[#15e2e5] to-[#232946] bg-clip-text text-[#15e2e5] dark:from-[#15e2e5] dark:to-white">
               About Me
             </h2>
             <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-300 font-mono max-w-2xl mx-auto">
               Get to know me better and learn about my journey as a developer.
             </p>
           </div>
@@ -46,17 +46,17 @@ export default function About() {
 
             {/* Content Column */}
             <div>
-              <h3 className="text-2xl font-bold mb-4 dark:text-white">
+              <h3 className="text-2xl font-bold mb-4 text-white">
                 A passionate Web Developer based in New York
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-gray-200 font-mono  mb-6">
                 I'm a full-stack developer with a passion for creating
                 interactive, responsive, and user-friendly websites. With over 5
                 years of experience in web development, I specialize in building
                 modern web applications using React, Node.js, and other
                 cutting-edge technologies.
               </p>
-              <p className="text-gray-600 dark:text-gray-400 mb-8">
+              <p className="text-gray-200 font-mono mb-8">
                 My journey in tech started when I built my first website at the
                 age of 16. Since then, I've been constantly learning and
                 improving my skills to stay up-to-date with the latest
@@ -65,19 +65,19 @@ export default function About() {
 
               {/* Personal Info */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center dark:text-white">
+                <div className="flex items-center text-white">
                   <Calendar className="w-5 h-5 text-[#15e2e5] mr-3" />
                   <span>Born: January 15, 1995</span>
                 </div>
-                <div className="flex items-center dark:text-white">
+                <div className="flex items-center text-white">
                   <MapPin className="w-5 h-5 text-[#15e2e5] mr-3" />
                   <span>Location: New York, USA</span>
                 </div>
-                <div className="flex items-center dark:text-white">
+                <div className="flex items-center text-white">
                   <Briefcase className="w-5 h-5 text-[#15e2e5] mr-3" />
                   <span>Experience: 5+ Years</span>
                 </div>
-                <div className="flex items-center dark:text-white">
+                <div className="flex items-center text-white">
                   <GraduationCap className="w-5 h-5 text-[#15e2e5] mr-3" />
                   <span>Degree: Computer Science</span>
                 </div>
@@ -109,7 +109,7 @@ export default function About() {
 
           {/* Timeline */}
           <div className="max-w-4xl mx-auto mt-20">
-            <h3 className="text-2xl font-bold text-center mb-10 dark:text-white">
+            <h3 className="text-2xl font-bold text-center mb-10 text-white">
               My Journey
             </h3>
 
@@ -118,7 +118,7 @@ export default function About() {
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200 dark:bg-gray-700"></div>
 
               {/* Timeline Items */}
-              <div className="space-y-12 dark:text-white">
+              <div className="space-y-12 text-white">
                 {[
                   {
                     year: "2023 - Present",
@@ -168,12 +168,12 @@ export default function About() {
                           <p className="text-[#15e2e5] font-medium">
                             {item.company}
                           </p>
-                          <p className="text-gray-600 dark:text-gray-400 mt-2">
+                          <p className="text-gray-200  mt-2">
                             {item.description}
                           </p>
                         </>
                       ) : (
-                        <span className="text-gray-500 font-semibold">
+                        <span className="text-gray-200 font-semibold">
                           {item.year}
                         </span>
                       )}
@@ -188,7 +188,7 @@ export default function About() {
                         index % 2 === 1 ? "md:text-right" : ""
                       }`}
                     >
-                      <span className="text-gray-500 font-semibold md:hidden block mb-1">
+                      <span className="text-gray-200 font-semibold md:hidden block mb-1">
                         {item.year}
                       </span>
                       {index % 2 === 1 ? (
@@ -199,13 +199,13 @@ export default function About() {
                           <p className="text-[#15e2e5] font-medium">
                             {item.company}
                           </p>
-                          <p className="text-gray-600 dark:text-gray-400 mt-2">
+                          <p className="text-gray-200  mt-2">
                             {item.description}
                           </p>
                         </>
                       ) : (
                         <>
-                          <span className="text-gray-500 font-semibold hidden md:block">
+                          <span className="text-gray-200 font-semibold hidden md:block">
                             {item.year}
                           </span>
                           <div className="md:hidden">
@@ -215,7 +215,7 @@ export default function About() {
                             <p className="text-[#15e2e5] font-medium">
                               {item.company}
                             </p>
-                            <p className="text-gray-600 dark:text-gray-400 mt-2">
+                            <p className="text-gray-200  mt-2">
                               {item.description}
                             </p>
                           </div>

@@ -26,6 +26,7 @@
     "react-scroll": "^1.9.3",
     "react-tsparticles": "^2.12.2",
     "tailwindcss": "^4.1.8",
+    "three": "^0.177.0",
     "tsparticles": "^3.8.1"
   },
   "devDependencies": {
