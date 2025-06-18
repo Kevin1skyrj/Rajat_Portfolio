@@ -17,14 +17,19 @@ const textVariants = {
 };
 
 const Content = () => (
-  <div id="home" className="relative w-screen h-screen bg-black overflow-hidden">
-     {/* Particle Background */}
-    <div className="absolute inset-0 z-0">
-  <ParticleHeaderBg />
-</div>
+  <div
+    id="home"
+    className="relative w-screen h-screen bg-transparent overflow-hidden"
+  >
+    {/* Particle Background */}
+    {/* <div className="absolute inset-0 z-0">
+      <ParticleHeaderBg />
+    </div> */}
 
-
-    <section id="inicio" className="flex justify-center items-center h-full relative z-10">
+    <section
+      id="inicio"
+      className="flex justify-center items-center h-full relative z-10"
+    >
       <div className="text-center z-0 mt-40 px-4">
         <motion.p
           className="text-white text-4xl font-semibold mb-2"

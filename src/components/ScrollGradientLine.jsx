@@ -16,7 +16,7 @@ const ScrollGradientLine = () => {
   }, []);
 
   return (
-    <div className="w-full h-3 bg-transparent overflow-hidden">
+    <div className="w-full h-1 bg-transparent overflow-hidden">
       <div
         className="h-full"
         style={{

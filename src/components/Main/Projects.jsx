@@ -111,7 +111,7 @@ export default function Projects() {
                 onClick={() => setFilter(category)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   filter === category
-                    ? "bg-[#15e2e5] text-white"
+                    ? "bg-cyan-500 text-white"
                     : "text-gray-600 dark:text-gray-400  dark:hover:text-gray-200"
                 }`}
               >
@@ -157,7 +157,7 @@ export default function Projects() {
                       <Github className="w-5 h-5" />
                     </a>
                   </div>
-                  <span className="px-3 py-1 bg-[#15e2e5] text-white text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-cyan-500 text-white text-xs font-medium rounded-full">
                     {project.category}
                   </span>
                 </div>
@@ -175,7 +175,7 @@ export default function Projects() {
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-cyan-500 text-white text-xs font-medium rounded-full"
+                      className="px-3 py-1 bg-white text-black text-xs font-medium rounded-full"
                     >
                       {tech}
                     </span>
@@ -199,7 +199,7 @@ export default function Projects() {
         <div className="text-center mt-12">
           <motion.a
             href="#"
-            className="inline-flex items-center px-6 py-3 bg-[#15e2e5] hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
+            className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
             whileHover={{ scale: 1.07 }}
           >
             View All Projects

@@ -51,7 +51,7 @@ export default function Contacts() {
         <div className="container mx-auto px-4 ">
           <div className="text-center mb-16">
             <motion.h2
-              className="text-cyan-400 text-3xl md:text-4xl font-bold mb-4 dark:text-white"
+              className="text-cyan-400 text-3xl md:text-4xl font-normal mb-4 dark:text-white"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
@@ -60,7 +60,7 @@ export default function Contacts() {
               Get In Touch
             </motion.h2>
             <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
-            <p className="text-gray-300 font-bold dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-300 font-normal dark:text-gray-400 max-w-2xl mx-auto">
               Have a project in mind or want to collaborate? Feel free to reach
               out to me using the contact form below.
             </p>
@@ -74,10 +74,10 @@ export default function Contacts() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <h3 className=" text-2xl font-bold mb-6 text-white">
+              <h3 className=" text-2xl font-normal mb-6 text-white">
                 Contact Information
               </h3>
-              <p className="text-gray-300 font-semibold dark:text-gray-400 mb-8">
+              <p className="text-gray-200 font-normal dark:text-gray-400 mb-8">
                 Feel free to reach out to me for any inquiries, project
                 discussions, or just to say hello. I'm always open to new
                 opportunities and collaborations.
@@ -88,14 +88,14 @@ export default function Contacts() {
                     <Mail className="w-5 h-5 text-[#15e2e5]" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-1 text-white">
+                    <h4 className="text-lg font-normal mb-1 text-white">
                       Email
                     </h4>
                     <a
                       href="mailto:hello@example.com"
-                      className="text-gray-300 font-semibold dark:text-gray-400 hover:text-[#15e2e5] dark:hover:text-cyan-500 transition-colors"
+                      className="text-gray-300 font-normal dark:text-gray-400 hover:text-[#15e2e5] dark:hover:text-cyan-500 transition-colors"
                     >
-                      hello@example.com
+                      rajatpndey257@gmail.com
                     </a>
                   </div>
                 </div>
@@ -105,14 +105,14 @@ export default function Contacts() {
                     <Phone className="w-5 h-5 text-[#15e2e5]" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-1 text-white">
+                    <h4 className="text-lg font-normal mb-1 text-white">
                       Phone
                     </h4>
                     <a
                       href="tel:+1234567890"
-                      className="text-gray-300 font-semibold dark:text-gray-400 hover:text-[#15e2e5] dark:hover:text-cyan-500 transition-colors"
+                      className="text-gray-300 font-normal dark:text-gray-400 hover:text-[#15e2e5] dark:hover:text-cyan-500 transition-colors"
                     >
-                      +1 (234) 567-890
+                      +91 7518588603
                     </a>
                   </div>
                 </div>
@@ -122,11 +122,11 @@ export default function Contacts() {
                     <MapPin className="w-5 h-5 text-[#15e2e5]" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-1 text-white">
+                    <h4 className="text-lg font-nomral mb-1 text-white">
                       Location
                     </h4>
-                    <p className="text-gray-300 font-semibold dark:text-gray-400">
-                      New York City, NY, United States
+                    <p className="text-gray-300 font-normal dark:text-gray-400">
+                      Rourkela , Odisha, India
                     </p>
                   </div>
                 </div>
