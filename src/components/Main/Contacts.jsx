@@ -51,7 +51,7 @@ export default function Contacts() {
         <div className="container mx-auto px-4 ">
           <div className="text-center mb-16">
             <motion.h2
-              className="text-cyan-400 text-3xl md:text-4xl font-normal mb-4 dark:text-white"
+              className="text-cyan-400 text-3xl md:text-4xl font-bold mb-4"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
@@ -84,7 +84,7 @@ export default function Contacts() {
               </p>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-purple-900/30 rounded-full flex items-center justify-center mr-4">
                     <Mail className="w-5 h-5 text-[#15e2e5]" />
                   </div>
                   <div>
@@ -101,7 +101,7 @@ export default function Contacts() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-purple-900/30 rounded-full flex items-center justify-center mr-4">
                     <Phone className="w-5 h-5 text-[#15e2e5]" />
                   </div>
                   <div>
@@ -118,7 +118,7 @@ export default function Contacts() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-purple-900/30 rounded-full flex items-center justify-center mr-4">
                     <MapPin className="w-5 h-5 text-[#15e2e5]" />
                   </div>
                   <div>
@@ -141,7 +141,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-red-500 text-red-500 bg-white dark:bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-red-500 text-red-500 bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
                     {/* Envelope SVG */}
                     <svg
                       className="w-7 h-7"
@@ -162,7 +162,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-green-500 text-green-500 bg-white dark:bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-green-500 text-green-500 bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
                     {/* WhatsApp SVG */}
                     <svg
                       className="w-7 h-7"
@@ -183,7 +183,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-pink-500 text-pink-500 bg-white dark:bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-pink-500 text-pink-500 bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
                     {/* Instagram SVG */}
                     <svg
                       className="w-7 h-7"
@@ -204,7 +204,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-blue-400 text-blue-400 bg-white dark:bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-blue-400 text-blue-400 bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
                     {/* Telegram SVG */}
                     <svg
                       className="w-7 h-7"
@@ -225,7 +225,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-blue-700 text-blue-700 bg-white dark:bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-blue-700 text-blue-700 bg-gray-900 transition-transform duration-300 group-hover:rotate-40 text-2xl">
                     {/* Linkedin SVG */}
                     <svg
                       className="w-7 h-7"
@@ -246,7 +246,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-white text-black bg-white dark:bg-gray-500 transition-transform duration-300 group-hover:rotate-40 text-2xl">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-white text-black bg-gray-500 transition-transform duration-300 group-hover:rotate-40 text-2xl">
                     {/* GitHub SVG */}
                     <svg
                       className="w-7 h-7"
@@ -269,7 +269,7 @@ export default function Contacts() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 dark:text-white"
+              className=" bg-gray-800 rounded-xl shadow-lg p-8 text-white"
             >
               <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
 
@@ -285,7 +285,7 @@ export default function Contacts() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      className="block text-sm font-medium text-gray-300 mb-2"
                     >
                       Your Name
                     </label>
@@ -296,14 +296,14 @@ export default function Contacts() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-700  bg-gray-900  text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]"
                       placeholder="John Doe"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      className="block text-sm font-mediumtext-gray-300 mb-2"
                     >
                       Your Email
                     </label>
@@ -314,7 +314,7 @@ export default function Contacts() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]"
+                      className="w-full px-4 py-3 rounded-lg border  border-gray-700 bg-gray-900  text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -323,7 +323,7 @@ export default function Contacts() {
                 <div className="mb-6">
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium  text-gray-300 mb-2"
                   >
                     Subject
                   </label>
@@ -334,7 +334,7 @@ export default function Contacts() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]"
+                    className="w-full px-4 py-3 rounded-lg border  border-gray-700  bg-gray-900  text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]"
                     placeholder="Project Inquiry"
                   />
                 </div>
@@ -342,7 +342,7 @@ export default function Contacts() {
                 <div className="mb-6">
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Your Message
                   </label>
@@ -353,7 +353,7 @@ export default function Contacts() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]resize-none"
+                    className="w-full px-4 py-3 rounded-lg border  border-gray-700  bg-gray-900  text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15e2e5]resize-none"
                     placeholder="Hello, I'd like to talk about..."
                   ></textarea>
                 </div>
@@ -363,8 +363,8 @@ export default function Contacts() {
                   disabled={isSubmitting}
                   className={`w-full flex items-center justify-center px-6 py-3 rounded-lg text-white font-medium transition-colors duration-300 ${
                     isSubmitting
-                      ? "bg-cyan-400 cursor-not-allowed"
-                      : "bg-gradient-to-r from-[#15e2e5] to-[#06b6d4] hover:from-[#06b6d4] hover:to-[#15e2e5]"
+                      ? "bg-cyan-500 cursor-not-allowed"
+                      : "bg-gradient-to-r from-[#0a8ada] to-[#0670d4] hover:from-[#085bcf] hover:to-[#0364a1]"
                   }`}
                 >
                   {isSubmitting ? (
