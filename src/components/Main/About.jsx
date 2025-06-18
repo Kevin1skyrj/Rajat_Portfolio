@@ -19,7 +19,7 @@ export default function About() {
               About Me
             </h2>
             <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
-            <p className="text-gray-300 font-mono max-w-2xl mx-auto">
+            <p className="text-gray-300 font-normal max-w-2xl mx-auto">
               Get to know me better and learn about my journey as a developer.
             </p>
           </div>
@@ -34,11 +34,11 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#15e2e5] rounded-full flex items-center justify-center text-white">
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#19b5d4fa] rounded-full flex items-center justify-center text-white">
                 <div className="text-center">
                   <div className="text-2xl font-bold">5+</div>
                   <div className="text-xs uppercase tracking-wider">
-                    Years of Experience
+                    Months of Experience
                   </div>
                 </div>
               </div>
@@ -49,14 +49,14 @@ export default function About() {
               <h3 className="text-2xl font-bold mb-4 text-white">
                 A passionate Web Developer based in New York
               </h3>
-              <p className="text-gray-200 font-mono  mb-6">
+              <p className="text-gray-200 font-normal  mb-6">
                 I'm a full-stack developer with a passion for creating
                 interactive, responsive, and user-friendly websites. With over 5
                 years of experience in web development, I specialize in building
                 modern web applications using React, Node.js, and other
                 cutting-edge technologies.
               </p>
-              <p className="text-gray-200 font-mono mb-8">
+              <p className="text-gray-200 font-normal mb-8">
                 My journey in tech started when I built my first website at the
                 age of 16. Since then, I've been constantly learning and
                 improving my skills to stay up-to-date with the latest
@@ -66,19 +66,19 @@ export default function About() {
               {/* Personal Info */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center text-white">
-                  <Calendar className="w-5 h-5 text-[#15e2e5] mr-3" />
+                  <Calendar className="w-5 h-5 text-[#19b5d4fa] mr-3" />
                   <span>Born: January 15, 1995</span>
                 </div>
                 <div className="flex items-center text-white">
-                  <MapPin className="w-5 h-5 text-[#15e2e5] mr-3" />
+                  <MapPin className="w-5 h-5 text-[#19b5d4fa] mr-3" />
                   <span>Location: New York, USA</span>
                 </div>
                 <div className="flex items-center text-white">
-                  <Briefcase className="w-5 h-5 text-[#15e2e5] mr-3" />
+                  <Briefcase className="w-5 h-5 text-[#19b5d4fa] mr-3" />
                   <span>Experience: 5+ Years</span>
                 </div>
                 <div className="flex items-center text-white">
-                  <GraduationCap className="w-5 h-5 text-[#15e2e5] mr-3" />
+                  <GraduationCap className="w-5 h-5 text-[#19b5d4fa] mr-3" />
                   <span>Degree: Computer Science</span>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function About() {
               {/* CTA Button */}
               <a
                 href="#contact"
-                className="inline-flex items-center px-6 py-3 bg-[#15e2e5] hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
+                className="inline-flex items-center px-6 py-3 bg-[#19b5d4fa] hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
               >
                 Contact Me
                 <svg
@@ -165,7 +165,7 @@ export default function About() {
                           <h4 className="text-xl font-semibold">
                             {item.title}
                           </h4>
-                          <p className="text-[#15e2e5] font-medium">
+                          <p className="text-[#19b5d4fa] font-medium">
                             {item.company}
                           </p>
                           <p className="text-gray-200  mt-2">
@@ -179,7 +179,7 @@ export default function About() {
                       )}
                     </div>
 
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#15e2e5] flex items-center justify-center z-10">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#19b5d4fa] flex items-center justify-center z-10">
                       <span className="text-white font-bold">{index + 1}</span>
                     </div>
 
@@ -196,7 +196,7 @@ export default function About() {
                           <h4 className="text-xl font-semibold">
                             {item.title}
                           </h4>
-                          <p className="text-[#15e2e5] font-medium">
+                          <p className="text-[#19b5d4fa] font-medium">
                             {item.company}
                           </p>
                           <p className="text-gray-200  mt-2">
@@ -212,7 +212,7 @@ export default function About() {
                             <h4 className="text-xl font-semibold">
                               {item.title}
                             </h4>
-                            <p className="text-[#15e2e5] font-medium">
+                            <p className="text-[#19b5d4fa] font-medium">
                               {item.company}
                             </p>
                             <p className="text-gray-200  mt-2">

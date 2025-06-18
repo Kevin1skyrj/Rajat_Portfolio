@@ -173,10 +173,14 @@ export default function TechStack() {
             ].map((skill, index) => (
               <motion.div
                 key={index}
-                className="space-y-2"
+               className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-md text-white border border-white/20 space-y-2"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 4px 24px #15e2e580",
+                }}
                 viewport={{ once: true }}
               >
                 <div className="flex justify-between">
