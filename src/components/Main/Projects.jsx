@@ -96,7 +96,7 @@ export default function Projects() {
             My Projects
           </motion.h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] mx-auto mb-6 rounded-full"></div>
-          <p className=" text-gray-200 font-mono max-w-2xl mx-auto">
+          <p className=" text-gray-200 font-normal max-w-2xl mx-auto">
             Check out some of my recent work and personal projects that showcase
             my skills and expertise.
           </p>
@@ -104,7 +104,7 @@ export default function Projects() {
 
         {/* Filter Buttons */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <div className="inline-flex p-1 bg-black dark:bg-gray-800 rounded-lg shadow-md">
             {["all", "web", "mobile"].map((category) => (
               <button
                 key={category}
@@ -112,7 +112,7 @@ export default function Projects() {
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   filter === category
                     ? "bg-[#15e2e5] text-white"
-                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                    : "text-gray-600 dark:text-gray-400  dark:hover:text-gray-200"
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -126,7 +126,7 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg group"
+              className=" bg-gray-800 rounded-xl overflow-hidden shadow-lg group"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -175,7 +175,7 @@ export default function Projects() {
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] text-white text-xs font-medium rounded-full"
+                      className="px-3 py-1 bg-cyan-500 text-white text-xs font-medium rounded-full"
                     >
                       {tech}
                     </span>
