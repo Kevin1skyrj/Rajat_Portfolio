@@ -27,7 +27,7 @@ const Content = () => (
     </div> */}
 
     <section
-      id="inicio"
+      id="home"
       className="flex justify-center items-center h-full relative z-10"
     >
       <div className="text-center z-0 mt-40 px-4">

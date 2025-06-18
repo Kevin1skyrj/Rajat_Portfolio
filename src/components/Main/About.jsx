@@ -5,7 +5,7 @@ export default function About() {
     <section
       id="about"
       // Palette 1: Modern Minimal
-      className="py-20 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
+      className="min-h-screen pt-24 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -165,7 +165,7 @@ export default function About() {
                           <h4 className="text-xl font-semibold">
                             {item.title}
                           </h4>
-                          <p className="text-[#19b5d4fa] font-medium">
+                          <p className="text-[] font-medium">
                             {item.company}
                           </p>
                           <p className="text-gray-200  mt-2">
@@ -179,7 +179,7 @@ export default function About() {
                       )}
                     </div>
 
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#19b5d4fa] flex items-center justify-center z-10">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[] flex items-center justify-center z-10">
                       <span className="text-white font-bold">{index + 1}</span>
                     </div>
 
@@ -196,7 +196,7 @@ export default function About() {
                           <h4 className="text-xl font-semibold">
                             {item.title}
                           </h4>
-                          <p className="text-[#19b5d4fa] font-medium">
+                          <p className="text-[] font-medium">
                             {item.company}
                           </p>
                           <p className="text-gray-200  mt-2">
@@ -212,7 +212,7 @@ export default function About() {
                             <h4 className="text-xl font-semibold">
                               {item.title}
                             </h4>
-                            <p className="text-[#19b5d4fa] font-medium">
+                            <p className="text-[] font-medium">
                               {item.company}
                             </p>
                             <p className="text-gray-200  mt-2">

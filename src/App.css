@@ -37,6 +37,11 @@ html, body {
   overflow-x: hidden;
 }
 
+section {
+  min-height: 100vh;
+}
+
+
 
 @keyframes marquee {
   0% { transform: translateX(100%);}
