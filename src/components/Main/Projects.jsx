@@ -104,7 +104,7 @@ export default function Projects() {
 
         {/* Filter Buttons */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1 bg-black dark:bg-gray-800 rounded-lg shadow-md">
+          <div className="inline-flex p-1 bg-gray-800 rounded-lg shadow-md">
             {["all", "web", "mobile"].map((category) => (
               <button
                 key={category}
@@ -112,7 +112,7 @@ export default function Projects() {
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   filter === category
                     ? "bg-cyan-500 text-white"
-                    : "text-gray-600 dark:text-gray-400  dark:hover:text-gray-200"
+                    : " text-gray-400 hover:text-gray-200"
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -165,8 +165,8 @@ export default function Projects() {
 
               {/* Project Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 dark:text-white">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+                <p className="text-gray-300  mb-4 line-clamp-2">
                   {project.description}
                 </p>
 
