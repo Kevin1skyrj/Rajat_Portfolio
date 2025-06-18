@@ -269,7 +269,7 @@ export default function Contacts() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
               viewport={{ once: true }}
-              className=" bg-gray-800 rounded-xl shadow-lg p-8 text-white"
+              className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-md text-white border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
 

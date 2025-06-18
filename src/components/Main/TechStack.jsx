@@ -115,7 +115,7 @@ export default function TechStack() {
             My Tech Stack
           </motion.h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-200 font-mono  max-w-2xl mx-auto">
+          <p className="text-gray-200 font-normal  max-w-2xl mx-auto">
             These are the technologies, frameworks, and tools I work with to
             build modern web applications.
           </p>
@@ -181,7 +181,7 @@ export default function TechStack() {
               >
                 <div className="flex justify-between">
                   <span className="font-medium">{skill.name}</span>
-                  <span className="text-[#15e2e5] font-semibold">
+                  <span className="text-[#0c94e3] font-semibold">
                     {skill.level}%
                   </span>
                 </div>
@@ -193,7 +193,7 @@ export default function TechStack() {
                     transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
                     style={{
                       background:
-                        "linear-gradient(90deg, #15e2e5 0%, #38bdf8 50%, #6366f1 100%)",
+                        "linear-gradient(90deg, #0c94e3 0%, #38bdf8 50%, #6366f1 100%)",
                     }}
                   />
                 </div>

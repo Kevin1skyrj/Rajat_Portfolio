@@ -47,7 +47,7 @@ export default function Services() {
             My Skills
           </h2>
           <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
-          <p className="text-gray-200 font-mono  max-w-2xl mx-auto">
+          <p className="text-gray-200 font-normal  max-w-2xl mx-auto">
             Here are my technical skills and proficiencies that I've developed
             over the years.
           </p>
@@ -56,15 +56,15 @@ export default function Services() {
         <div className="max-w-4xl mx-auto">
           {/* Skill Categories */}
           <div className="flex justify-center mb-10">
-            <div className="inline-flex p-1 bg-gray-100 dark:bg-gray-800 rounded-lg">
+            <div className="inline-flex p-1 bg-gray-800 rounded-lg">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-4 py-2 rounded-md transition-all duration-200 ${
                     activeTab === category.id
-                      ? "bg-white dark:bg-gray-700 shadow-md"
-                      : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                      ? "bg-white shadow-md"
+                      : "text-gray-500  hover:text-gray-300 hover:cursor-pointer"
                   }`}
                 >
                   <span className="mr-2">{category.icon}</span>
@@ -79,7 +79,7 @@ export default function Services() {
             {skills[activeTab].map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md dark:text-white"
+                className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-md text-white border border-white/20"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -150,9 +150,7 @@ export default function Services() {
               >
                 {item.icon}
               </div>
-              <h3 className="font-medium text-white ">
-                {item.label}
-              </h3>
+              <h3 className="font-medium text-white ">{item.label}</h3>
             </motion.div>
           ))}
         </div>

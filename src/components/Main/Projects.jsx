@@ -199,7 +199,7 @@ export default function Projects() {
         <div className="text-center mt-12">
           <motion.a
             href="#"
-            className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
+            className="inline-flex items-center px-6 py-3 bg-[#2491da] hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
             whileHover={{ scale: 1.07 }}
           >
             View All Projects
