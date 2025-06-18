@@ -1,5 +1,6 @@
 import { Calendar, MapPin, Briefcase, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
+import Timeline from "./Timeline";
 export default function About() {
   return (
     <section
@@ -106,127 +107,9 @@ export default function About() {
               </a>
             </div>
           </div>
-
-          {/* Timeline */}
-          <div className="max-w-4xl mx-auto mt-20">
-            <h3 className="text-2xl font-bold text-center mb-10 text-white">
-              My Journey
-            </h3>
-
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200 dark:bg-gray-700"></div>
-
-              {/* Timeline Items */}
-              <div className="space-y-12 text-white">
-                {[
-                  {
-                    year: "2023 - Present",
-                    title: "Senior Frontend Developer",
-                    company: "Tech Innovations Inc.",
-                    description:
-                      "Leading the frontend development team and implementing modern UI/UX designs.",
-                  },
-                  {
-                    year: "2020 - 2023",
-                    title: "Full Stack Developer",
-                    company: "Digital Solutions LLC",
-                    description:
-                      "Developed and maintained full-stack web applications using React and Node.js.",
-                  },
-                  {
-                    year: "2018 - 2020",
-                    title: "Junior Web Developer",
-                    company: "WebCraft Studios",
-                    description:
-                      "Started my professional journey building responsive websites and e-commerce platforms.",
-                  },
-                  {
-                    year: "2017",
-                    title: "Computer Science Degree",
-                    company: "Tech University",
-                    description:
-                      "Graduated with honors in Computer Science with a focus on web technologies.",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`relative flex items-center ${
-                      index % 2 === 0 ? "justify-start" : "justify-end"
-                    } md:justify-between`}
-                  >
-                    <div
-                      className={`hidden md:block w-5/12 ${
-                        index % 2 === 0 ? "text-right" : ""
-                      }`}
-                    >
-                      {index % 2 === 0 ? (
-                        <>
-                          <h4 className="text-xl font-semibold">
-                            {item.title}
-                          </h4>
-                          <p className="text-[] font-medium">
-                            {item.company}
-                          </p>
-                          <p className="text-gray-200  mt-2">
-                            {item.description}
-                          </p>
-                        </>
-                      ) : (
-                        <span className="text-gray-200 font-semibold">
-                          {item.year}
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[] flex items-center justify-center z-10">
-                      <span className="text-white font-bold">{index + 1}</span>
-                    </div>
-
-                    <div
-                      className={`md:w-5/12 w-full ${
-                        index % 2 === 1 ? "md:text-right" : ""
-                      }`}
-                    >
-                      <span className="text-gray-200 font-semibold md:hidden block mb-1">
-                        {item.year}
-                      </span>
-                      {index % 2 === 1 ? (
-                        <>
-                          <h4 className="text-xl font-semibold">
-                            {item.title}
-                          </h4>
-                          <p className="text-[] font-medium">
-                            {item.company}
-                          </p>
-                          <p className="text-gray-200  mt-2">
-                            {item.description}
-                          </p>
-                        </>
-                      ) : (
-                        <>
-                          <span className="text-gray-200 font-semibold hidden md:block">
-                            {item.year}
-                          </span>
-                          <div className="md:hidden">
-                            <h4 className="text-xl font-semibold">
-                              {item.title}
-                            </h4>
-                            <p className="text-[] font-medium">
-                              {item.company}
-                            </p>
-                            <p className="text-gray-200  mt-2">
-                              {item.description}
-                            </p>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        </div>
+        <div>
+          <Timeline />
         </div>
       </motion.div>
     </section>
