@@ -6,7 +6,7 @@ export default function About() {
     <section
       id="about"
       // Palette 1: Modern Minimal
-      className="min-h-screen pt-24 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
+      className= "pt-24 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

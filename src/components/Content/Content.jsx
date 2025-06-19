@@ -22,9 +22,9 @@ const Content = () => (
     className="relative w-screen h-screen bg-transparent overflow-hidden"
   >
   { /* Particle Background on the right side */}
-  <div className=" absolute mt-20 top-1/4 right-60 -translate-y-1/2 z-0 w-[300px] h-[300px] d:w-[180px] md:h-[180px]">
+  {/* <div className=" absolute mt-20 top-1/4 right-60 -translate-y-1/2 z-0 w-[300px] h-[300px] d:w-[180px] md:h-[180px]">
     <ParticleHeaderBg />
-  </div>
+  </div> */}
 
     <section
       id="home"
