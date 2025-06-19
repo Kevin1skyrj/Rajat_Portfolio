@@ -23,7 +23,7 @@ const ScrollToTop = () => {
       {backToTopButton && (
         <button
           onClick={scrollUp}
-          className="fixed bottom-16 right-6 z-[100] h-12 w-12 sm:h-10 sm:w-10 bg-[#1db2e8] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+          className="fixed bottom-16 right-6 z-[100] h-20 w-20 sm:h-15 sm:w-15 bg-[#1db2e8] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
         >
           <i className="fas fa-chevron-up text-lg sm:text-sm" />
         </button>

@@ -6,12 +6,12 @@ const SocialIcons = ({
   showHeader = true,
   showTypingAnimation = true,
   socialLinks = {
-    gmail: "mailto:estebancarrizo619@gmail.com",
-    whatsapp: "https://api.whatsapp.com/send?phone=5493815360966",
-    instagram: "https://www.instagram.com/nahuelcarrizolc/",
-    telegram: "https://t.me/estebanU20",
-    linkedin: "https://www.linkedin.com/in/esteban-nahuel-carrizo-69715422b/",
-    github: "https://github.com/Nahuel61920/",
+    gmail: "",
+    whatsapp: "",
+    instagram: "",
+    telegram: "",
+    linkedin: "",
+    github: "",
   },
   enableAOS = true,
   

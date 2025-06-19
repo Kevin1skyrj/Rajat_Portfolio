@@ -53,7 +53,7 @@ export default function About() {
               <p className="text-gray-200 font-normal  mb-6">
                 I'm a full-stack developer with a passion for creating
                 interactive, responsive, and user-friendly websites. With over 5
-                years of experience in web development, I specialize in building
+                months of experience in web development, I specialize in building
                 modern web applications using React, Node.js, and other
                 cutting-edge technologies.
               </p>
@@ -68,15 +68,15 @@ export default function About() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center text-white">
                   <Calendar className="w-5 h-5 text-[#19b5d4fa] mr-3" />
-                  <span>Born: January 15, 1995</span>
+                  <span>Born: December 06, 2005</span>
                 </div>
                 <div className="flex items-center text-white">
                   <MapPin className="w-5 h-5 text-[#19b5d4fa] mr-3" />
-                  <span>Location: New York, USA</span>
+                  <span>Location: Rourkela, INDIA</span>
                 </div>
                 <div className="flex items-center text-white">
                   <Briefcase className="w-5 h-5 text-[#19b5d4fa] mr-3" />
-                  <span>Experience: 5+ Years</span>
+                  <span>Experience: 5+ Months</span>
                 </div>
                 <div className="flex items-center text-white">
                   <GraduationCap className="w-5 h-5 text-[#19b5d4fa] mr-3" />
@@ -86,7 +86,7 @@ export default function About() {
 
               {/* CTA Button */}
               <a
-                href="#contact"
+                href="#contacts"
                 className="inline-flex items-center px-6 py-3 bg-[#19b5d4fa] hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-300"
               >
                 Contact Me
