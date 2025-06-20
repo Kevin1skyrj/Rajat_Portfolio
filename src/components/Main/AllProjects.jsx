@@ -7,7 +7,125 @@ export default function AllProjects() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("newest");
 
-  const projects = [/* same data array from your code */];
+  const projects = [
+    {
+      id: 1,
+      title: "E-Commerce Dashboard",
+      category: "web",
+      image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A comprehensive dashboard for e-commerce businesses with analytics, inventory management, and real-time data visualization.",
+      technologies: ["React", "Tailwind CSS", "Chart.js", "Firebase", "TypeScript"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: true,
+      date: "2024-01-15",
+      status: "completed"
+    },
+    {
+      id: 2,
+      title: "Social Media App",
+      category: "mobile",
+      image: "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A social networking platform with real-time messaging, content sharing, and advanced user interaction features.",
+      technologies: ["React Native", "Node.js", "Socket.io", "MongoDB", "Redux"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: false,
+      date: "2024-02-20",
+      status: "completed"
+    },
+    {
+      id: 3,
+      title: "Portfolio Website",
+      category: "web",
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A modern, responsive portfolio website showcasing projects and skills with elegant animations and clean design.",
+      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite", "TypeScript"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: true,
+      date: "2024-03-10",
+      status: "completed"
+    },
+    {
+      id: 4,
+      title: "Task Management Tool",
+      category: "web",
+      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A comprehensive productivity app for managing tasks, projects, and team collaboration with advanced filtering.",
+      technologies: ["React", "Redux", "Express", "PostgreSQL", "Socket.io"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: false,
+      date: "2023-12-05",
+      status: "completed"
+    },
+    {
+      id: 5,
+      title: "Weather Forecast App",
+      category: "mobile",
+      image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A beautiful weather application providing real-time forecasts, weather alerts, and location-based services.",
+      technologies: ["React Native", "Weather API", "Geolocation", "Redux", "Expo"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: false,
+      date: "2024-01-30",
+      status: "completed"
+    },
+    {
+      id: 6,
+      title: "Blog Platform",
+      category: "web",
+      image: "https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A modern content management system for creating and publishing blog posts with rich text editing and user authentication.",
+      technologies: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: true,
+      date: "2024-02-14",
+      status: "completed"
+    },
+    {
+      id: 7,
+      title: "Fitness Tracker",
+      category: "mobile",
+      image: "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A comprehensive fitness tracking application with workout plans, progress monitoring, and social features.",
+      technologies: ["React Native", "Firebase", "HealthKit", "Redux", "Chart.js"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: false,
+      date: "2023-11-20",
+      status: "completed"
+    },
+    {
+      id: 8,
+      title: "Real Estate Platform",
+      category: "web",
+      image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A modern real estate platform with property listings, virtual tours, and advanced search capabilities.",
+      technologies: ["Next.js", "TypeScript", "Prisma", "Stripe", "Mapbox"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: true,
+      date: "2024-03-25",
+      status: "in-progress"
+    },
+    {
+      id: 9,
+      title: "Recipe Sharing App",
+      category: "mobile",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "A social platform for sharing and discovering recipes with meal planning and shopping list features.",
+      technologies: ["React Native", "Node.js", "MongoDB", "Cloudinary", "Expo"],
+      demoLink: "#",
+      githubLink: "#",
+      featured: false,
+      date: "2024-04-01",
+      status: "in-progress"
+    }
+  ];
 
   const categories = [
     { id: "all", label: "All Projects", icon: Globe },
@@ -191,7 +309,7 @@ export default function AllProjects() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Play className="w-5 h-5" />
+                        <ExternalLink className="w-5 h-5" />
                       </motion.a>
                       <motion.a
                         href={project.githubLink}
@@ -241,7 +359,7 @@ export default function AllProjects() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <Play className="w-4 h-4 mr-2" />
+                      <ExternalLink className="w-4 h-4 mr-2" />
                       Demo
                     </motion.a>
                     

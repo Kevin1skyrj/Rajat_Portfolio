@@ -10,6 +10,7 @@ import {
   Play,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom"; // Add this import
 import AllProjects from "./AllProjects";
 
 export default function Projects() {
@@ -430,15 +431,13 @@ export default function Projects() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-              <motion.a
-                href="/all-projects"
+              <Link
+                to="/all-projects"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 text-sm sm:text-base"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
               >
                 <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 <span>View All Projects</span>
-              </motion.a>
+              </Link>
             </div>
           </div>
         </motion.div>

@@ -7,12 +7,17 @@ import Projects from "./components/Main/Projects";
 import Contacts from "./components/Main/Contacts";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AllProjects from "./components/Main/AllProjects";
 // created router
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Homepage />,
+  },
+  {
+    path: "/all-projects",
+    element: <AllProjects />, // Add this route
   },
   // {
   //   path: "/About",
