@@ -6,7 +6,7 @@ export default function About() {
     <section
       id="about"
       // Palette 1: Modern Minimal
-      className= "pt-24 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
+      className="pt-24 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -16,7 +16,7 @@ export default function About() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-br from-[#15e2e5] to-[#232946] bg-clip-text text-[#15e2e5] dark:from-[#15e2e5] dark:to-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cyan-400 ">           
               About Me
             </h2>
             <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
@@ -35,7 +35,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#19b5d4fa] rounded-full flex items-center justify-center text-white">
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cyan-500 rounded-full flex items-center justify-center text-white">
                 <div className="text-center">
                   <div className="text-2xl font-bold">5+</div>
                   <div className="text-xs uppercase tracking-wider">
@@ -53,8 +53,8 @@ export default function About() {
               <p className="text-gray-200 font-normal  mb-6">
                 I'm a full-stack developer with a passion for creating
                 interactive, responsive, and user-friendly websites. With over 5
-                months of experience in web development, I specialize in building
-                modern web applications using React, Node.js, and other
+                months of experience in web development, I specialize in
+                building modern web applications using React, Node.js, and other
                 cutting-edge technologies.
               </p>
               <p className="text-gray-200 font-normal mb-8">

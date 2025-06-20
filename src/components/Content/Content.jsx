@@ -41,7 +41,7 @@ const Content = () => (
           Hello
         </motion.p>
         <motion.h1
-          className="text-[#15e2e5] text-5xl font-bold mb-2"
+          className="text-cyan-400 text-5xl font-bold mb-2"
           initial="hidden"
           animate="visible"
           custom={1}
@@ -64,7 +64,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#0077b5] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#0077b5] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
             <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-linkedin-in text-2xl" />
@@ -79,7 +79,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#333] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#333] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
             <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-github text-2xl" />
@@ -94,7 +94,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#E1306C] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#E1306C] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
             <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-instagram text-2xl" />
@@ -109,7 +109,7 @@ const Content = () => (
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center bg-[#15e2e5] text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#4fc35b] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#4fc35b] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
           >
             <div className="flex items-center justify-center w-12 h-12 mx-3.5">
               <i className="fab fa-whatsapp text-2xl" />

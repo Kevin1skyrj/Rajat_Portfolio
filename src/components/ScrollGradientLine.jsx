@@ -18,10 +18,10 @@ const ScrollGradientLine = () => {
   return (
     <div className="w-full h-1 bg-transparent overflow-hidden">
       <div
-        className="h-full"
+        className="h-full bg-cyan-400"
         style={{
           width: `${scrollPercent}%`,
-          background: "linear-gradient(cyan, #15e2e5)",
+          
           transition: "width 0.2s linear",
         }}
       />
