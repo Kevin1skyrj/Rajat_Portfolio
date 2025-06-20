@@ -364,7 +364,7 @@ export default function AllProjects() {
                       whileTap={{ scale: 0.98 }}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
+                     Live Demo
                     </motion.a>
                     
                     <motion.a
