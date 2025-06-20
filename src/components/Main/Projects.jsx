@@ -12,6 +12,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom"; // Add this import
 import AllProjects from "./AllProjects";
+import ScroolToTop from "../ScroolTop/ScroolToTop";
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -169,10 +170,9 @@ export default function Projects() {
       id="projects"
       className="py-10 sm:py-16 lg:py-24 bg-transparent relative overflow-hidden"
     >
-      {/* <div id="projects-section">
-        <AllProjects />
-      </div> */}
-
+      <div>
+        <ScroolToTop />
+      </div>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div

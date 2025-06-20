@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Homepage from "./pages/Home/Homepage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./components/Main/About";
-import Projects from "./components/Main/Projects";
-import Contacts from "./components/Main/Contacts";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import AllProjects from "./components/Main/AllProjects";
 // created router
 
@@ -19,31 +14,23 @@ const router = createBrowserRouter([
     path: "/all-projects",
     element: <AllProjects />, // Add this route
   },
-  // {
-  //   path: "/About",
-  //   element: <About />,
-  // },
-  // {
-  //   path: "/Projects",
-  //   element: <Projects />,
-  // },
-  // {
-  //   path: "/Contacts",
-  //   element: <Contacts />,
-  // },
 ]);
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    // Only show loader on first load, not on navigation
+    return sessionStorage.getItem("hasLoaded") ? false : true;
+  });
 
   useEffect(() => {
-    AOS.init({ once: false, duration: 800 });
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 4000);
-    return () => clearTimeout(timer);
-  }, []);
+    if (loading) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem("hasLoaded", "true");
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
 
   return (
     <>

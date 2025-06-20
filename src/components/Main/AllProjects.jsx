@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ExternalLink, Github, ArrowLeft, Code, Smartphone, Globe, Play, Filter, Search } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function AllProjects() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [filter, setFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("newest");
