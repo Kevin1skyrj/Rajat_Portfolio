@@ -145,8 +145,8 @@ export default function ThreeBackground() {
     position: "fixed",
     top: 0,
     left: 0,
-    width: "10%",
-    height: "10%",
+    width: "100vw",
+    height: "100vh",
     zIndex:0, // Try 0 instead of -1 to debug
     backgroundColor: "#000", // Helps test if div is visible
     pointerEvents: "none", // Prevents interfering with UI clicks
