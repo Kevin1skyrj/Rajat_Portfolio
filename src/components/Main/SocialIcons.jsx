@@ -21,7 +21,7 @@ const SocialIcons = ({
   const socialData = [
     {
       href: socialLinks.gmail,
-      icon: "fab fas fa-envelope",
+      icon: "fa-solid  fa-envelope",
       text: "Gmail",
       name: "gmail",
     },

@@ -83,6 +83,14 @@
   line-height: 2rem;
 }
 
+.icons a .layer span.fa-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+
 .icons a:hover .layer span:nth-child(1) {
   opacity: 0.2;
 }
