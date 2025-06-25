@@ -120,7 +120,7 @@ const Content = () => (
           </a>
         </div>
 
-        <Link to="about" smooth duration={500}>
+        <Link to="about" smooth duration={1000}>
           <div className="h-12 w-8 border-2 border-white mx-auto mt-40 rounded-full relative cursor-pointer animate-bounce">
             <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45"></div>
             <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45 opacity-60"></div>
