@@ -212,6 +212,7 @@
     font-size: 2rem;
     line-height: 2.5rem;
   }
+ 
   .icons a .text {
     font-size: 1.1rem;
     bottom: -25px;
@@ -241,6 +242,10 @@
     height: 2.5rem;
   }
   .icons a .layer span.fab {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+   .icons a .layer span.fa-solid {
     font-size: 1.2rem;
     line-height: 1.5rem;
   }

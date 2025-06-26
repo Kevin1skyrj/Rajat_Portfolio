@@ -48,7 +48,7 @@ export default function About() {
             {/* Content Column */}
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">
-                A passionate Web Developer based in New York
+                A passionate Web Developer based in India
               </h3>
               <p className="text-gray-200 font-normal  mb-6">
                 I'm a full-stack developer with a passion for creating
