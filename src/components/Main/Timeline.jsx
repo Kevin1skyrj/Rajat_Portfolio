@@ -1,43 +1,56 @@
 import React, { useRef } from "react";
-import { Calendar, MapPin, GraduationCap, Briefcase } from "lucide-react";
+import { Calendar, MapPin, GraduationCap, Briefcase, User, Target } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const timelineData = [
   {
-    year: "2023 - Present",
-    title: "Senior Frontend Developer",
-    company: "Tech Innovations Inc.",
+    year: "Aug 2023 - Present",
+    title: "B.Tech (3rd Year)",
+    company: "NIT Rourkela",
     description:
-      "Leading the frontend development team and implementing modern UI/UX designs with React, TypeScript, and advanced state management.",
-    type: "work",
-  },
-  {
-    year: "2020 - 2023",
-    title: "Full Stack Developer",
-    company: "Digital Solutions LLC",
-    description:
-      "Developed and maintained full-stack web applications using React, Node.js, and cloud technologies. Improved application performance by 40%.",
-    type: "work",
-  },
-  {
-    year: "2018 - 2020",
-    title: "Junior Web Developer",
-    company: "WebCraft Studios",
-    description:
-      "Started my professional journey building responsive websites and e-commerce platforms. Collaborated with design teams to create pixel-perfect implementations.",
-    type: "work",
-  },
-  {
-    year: "2017",
-    title: "Computer Science Degree",
-    company: "Tech University",
-    description:
-      "Graduated with honors in Computer Science with a focus on web technologies, algorithms, and software engineering principles.",
+      "Pursuing engineering from one of India's premier institutes.",
     type: "education",
+  },
+  {
+    year: "Apr - Jul 2025",
+    title: "Full Stack Developer Intern",
+    company: "Jeevijay Technologies",
+    description:
+      "Built web applications using React.js, Node.js, and MongoDB with focus on UI/UX.",
+    type: "internship",
+  },
+  {
+    year: "Jul 2025 - Present",
+    title: "Freelance Developer",
+    company: "Independent",
+    description:
+      "Building tools like Job Tracker, Admin Dashboards with modern tech stacks.",
+    type: "freelance",
+  },
+  {
+    year: "2025 & Beyond",
+    title: "Future Goals",
+    company: "Tech Industry",
+    description:
+      "Open-source contributions, SDE internships, and preparing for top tech companies.",
+    type: "goals",
   },
 ];
 
-const getIcon = (type) => (type === "work" ? Briefcase : GraduationCap);
+const getIcon = (type) => {
+  switch (type) {
+    case "education":
+      return GraduationCap;
+    case "internship":
+      return Briefcase;
+    case "freelance":
+      return User;
+    case "goals":
+      return Target;
+    default:
+      return Briefcase;
+  }
+};
 
 const Timeline = () => {
   const timelineRef = useRef(null);
@@ -49,14 +62,14 @@ const Timeline = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="py-10 md:py-16 bg-transparent px-2" ref={timelineRef}>
-      <div className="max-w-4xl mx-auto">
+    <section className="py-6 md:py-10 bg-transparent px-2" ref={timelineRef}>
+      <div className="max-w-3xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+        <div className="text-center mb-6 md:mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
             My Journey
           </h2>
-          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-gray-300 max-w-xl mx-auto leading-relaxed">
             A timeline of my professional growth and educational achievements
           </p>
         </div>
@@ -72,7 +85,7 @@ const Timeline = () => {
           </div>
 
           {/* Timeline Items */}
-          <div className="flex-1 flex flex-col gap-10 md:gap-16 z-10">
+          <div className="flex-1 flex flex-col gap-6 md:gap-8 z-10">
             {timelineData.map((item, index) => {
               const isLeft = index % 2 === 0;
               const Icon = getIcon(item.type);
@@ -89,19 +102,19 @@ const Timeline = () => {
                     }`}
                   >
                     {isLeft && (
-                      <div className="max-w-md bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl hover:shadow-2xl hover:bg-white/15 transition-all duration-300 text-right">
-                        <div className="flex items-center justify-end gap-2 text-blue-300 font-semibold mb-2">
-                          <Calendar size={18} />
-                          <span>{item.year}</span>
+                      <div className="max-w-xs bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300 text-right">
+                        <div className="flex items-center justify-end gap-2 text-blue-300 font-medium mb-1">
+                          <Calendar size={14} />
+                          <span className="text-xs">{item.year}</span>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-1">
+                        <h3 className="text-base font-bold text-white mb-1">
                           {item.title}
                         </h3>
-                        <div className="flex items-center justify-end gap-2 text-purple-300 font-medium mb-2">
-                          <MapPin size={16} />
-                          <span>{item.company}</span>
+                        <div className="flex items-center justify-end gap-2 text-purple-300 font-medium mb-1">
+                          <MapPin size={12} />
+                          <span className="text-xs">{item.company}</span>
                         </div>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed text-xs">
                           {item.description}
                         </p>
                       </div>
@@ -110,8 +123,8 @@ const Timeline = () => {
 
                   {/* Timeline Dot */}
                   <div className="flex-shrink-0 flex flex-col items-center md:mx-0 mx-6 z-10">
-                    <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center shadow-lg">
-                      <Icon className="text-white" size={24} />
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center shadow-lg">
+                      <Icon className="text-white" size={16} />
                     </div>
                   </div>
 
@@ -122,19 +135,19 @@ const Timeline = () => {
                     }`}
                   >
                     {!isLeft && (
-                      <div className="max-w-md bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl hover:shadow-2xl hover:bg-white/15 transition-all duration-300 text-left">
-                        <div className="flex items-center gap-2 text-blue-300 font-semibold mb-2">
-                          <Calendar size={18} />
-                          <span>{item.year}</span>
+                      <div className="max-w-xs bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300 text-left">
+                        <div className="flex items-center gap-2 text-blue-300 font-medium mb-1">
+                          <Calendar size={14} />
+                          <span className="text-xs">{item.year}</span>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-1">
+                        <h3 className="text-base font-bold text-white mb-1">
                           {item.title}
                         </h3>
-                        <div className="flex items-center gap-2 text-purple-300 font-medium mb-2">
-                          <MapPin size={16} />
-                          <span>{item.company}</span>
+                        <div className="flex items-center gap-2 text-purple-300 font-medium mb-1">
+                          <MapPin size={12} />
+                          <span className="text-xs">{item.company}</span>
                         </div>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed text-xs">
                           {item.description}
                         </p>
                       </div>
@@ -142,22 +155,22 @@ const Timeline = () => {
                   </div>
 
                   {/* Mobile Layout */}
-                  <div className="md:hidden flex flex-row items-start gap-4 ml-2">
+                  <div className="md:hidden flex flex-row items-start gap-3 ml-2">
                     {/* Dot is already rendered above */}
                     <div className="flex-1">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300">
-                        <div className="flex items-center gap-2 text-blue-300 font-semibold mb-1">
-                          <Calendar size={16} />
-                          <span className="text-sm">{item.year}</span>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300">
+                        <div className="flex items-center gap-2 text-blue-300 font-medium mb-1">
+                          <Calendar size={12} />
+                          <span className="text-xs">{item.year}</span>
                         </div>
-                        <h3 className="text-lg font-bold text-white mb-1">
+                        <h3 className="text-sm font-bold text-white mb-1">
                           {item.title}
                         </h3>
                         <div className="flex items-center gap-2 text-purple-300 font-medium mb-1">
-                          <MapPin size={14} />
-                          <span className="text-sm">{item.company}</span>
+                          <MapPin size={10} />
+                          <span className="text-xs">{item.company}</span>
                         </div>
-                        <p className="text-gray-300 leading-relaxed text-sm">
+                        <p className="text-gray-300 leading-relaxed text-xs">
                           {item.description}
                         </p>
                       </div>
@@ -170,10 +183,10 @@ const Timeline = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-10 md:mt-16">
-          <div className="inline-flex items-center gap-3 text-gray-400">
-            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 animate-pulse" />
-            <span className="font-medium">The journey continues...</span>
+        <div className="text-center mt-6 md:mt-8">
+          <div className="inline-flex items-center gap-2 text-gray-400">
+            <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 animate-pulse" />
+            <span className="font-medium text-sm">The journey continues...</span>
           </div>
         </div>
       </div>
