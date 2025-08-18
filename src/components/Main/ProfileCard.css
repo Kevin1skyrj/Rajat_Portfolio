@@ -60,7 +60,7 @@
 
 .rb-card-wrapper:hover::before,
 .rb-card-wrapper.active::before {
-  filter: contrast(1.5) saturate(2.5) blur(35px) opacity(1);
+  filter: contrast(1.1) saturate(1.2) blur(30px) opacity(0.3);
   transform: scale(0.95) translate3d(0, 0, 0.1px);
 }
 
@@ -72,12 +72,12 @@
   border-radius: var(--card-radius);
   position: relative;
   background-blend-mode: color-dodge, normal, normal, normal;
-  box-shadow: rgba(0, 0, 0, 0.5) calc((var(--pointer-from-left) * 15px) - 7px) calc((var(--pointer-from-top) * 25px) - 12px) 35px -8px;
+  box-shadow: rgba(0, 0, 0, 0.3) calc((var(--pointer-from-left) * 8px) - 4px) calc((var(--pointer-from-top) * 12px) - 6px) 20px -5px;
   transition: transform 0.1s ease-out;
-  transform: translate3d(0, 0, 0.1px) rotateX(calc(var(--rotate-y) * 0.8)) rotateY(calc(var(--rotate-x) * 0.8));
+  transform: translate3d(0, 0, 0.1px) rotateX(calc(var(--rotate-y) * 0.4)) rotateY(calc(var(--rotate-x) * 0.4));
   background-size: 100% 100%;
   background-position: 0 0, 0 0, 50% 50%, 0 0;
-  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 90%, var(--card-opacity)) 4%, hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaa88 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ffaa 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ffaa 0%, #07c6ffaa 40%, #07c6ffaa 60%, #c137ffaa 100%);
+  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(220, 30%, 85%, var(--card-opacity)) 4%, hsla(220, 20%, 75%, calc(var(--card-opacity) * 0.75)) 10%, hsla(220, 15%, 65%, calc(var(--card-opacity) * 0.5)) 50%, hsla(220, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #4f46e555 0%, #1e293b00 100%), radial-gradient(100% 100% at 50% 50%, #3b82f644 1%, #1e293b00 76%), conic-gradient(from 124deg at 50% 50%, #6366f144 0%, #3b82f644 40%, #6366f144 60%, #8b5cf644 100%);
   overflow: hidden;
   cursor: pointer;
 }

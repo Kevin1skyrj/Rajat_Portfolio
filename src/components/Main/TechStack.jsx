@@ -159,7 +159,7 @@ export default function TechStack() {
         </div>
 
         {/* Experience Bar */}
-        <div className="mt-20 max-w-4xl mx-auto text-white">
+        {/* <div className="mt-20 max-w-4xl mx-auto text-white">
           <h3 className="text-2xl font-bold mb-8 text-center">
             Experience Level
           </h3>
@@ -204,7 +204,7 @@ export default function TechStack() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
