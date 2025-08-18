@@ -1,11 +1,12 @@
 import { Calendar, MapPin, Briefcase, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 import Timeline from "./Timeline";
+import ProfileCard from "./ProfileCard";
+
 export default function About() {
   return (
     <section
       id="about"
-      // Palette 1: Modern Minimal
       className="pt-24 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c] z-12"
     >
       <motion.div
@@ -16,7 +17,7 @@ export default function About() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cyan-400 ">           
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cyan-400">           
               About Me
             </h2>
             <div className="w-20 h-1 bg-[#15e2e5] mx-auto mb-6"></div>
@@ -26,23 +27,18 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Image Column */}
-            <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800">
-                <img
-                  src="/projects/services-bg6.jpg?height=600&width=600"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cyan-500 rounded-full flex items-center justify-center text-white">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">5+</div>
-                  <div className="text-xs uppercase tracking-wider">
-                    Months of Experience
-                  </div>
-                </div>
-              </div>
+            {/* Profile Card Column */}
+            <div className="flex justify-center lg:justify-start">
+              <ProfileCard 
+                name="Rajat Pandey"
+                title="Software Engineer"
+                handle="rajatpandey_dev"
+                status="Available for work"
+                avatarUrl="/profile1.png"
+                miniAvatarUrl="/profile1.png"
+                enableTilt={false}
+                enableMobileTilt={false}
+              />
             </div>
 
             {/* Content Column */}
@@ -50,7 +46,7 @@ export default function About() {
               <h3 className="text-2xl font-bold mb-4 text-white">
                 A passionate Web Developer based in India
               </h3>
-              <p className="text-gray-200 font-normal  mb-6">
+              <p className="text-gray-200 font-normal mb-6">
                 I'm a full-stack developer with a passion for creating
                 interactive, responsive, and user-friendly websites. With over 5
                 months of experience in web development, I specialize in
