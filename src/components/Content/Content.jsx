@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-scroll";
-import ParticleHeaderBg from "../ParticlesBg/ParticleHeader/ParticleHeaderBg";
 import { motion } from "framer-motion";
+import ProfileCard from "../Main/ProfileCard";
+import TextType from "../TextType/TextType";
 
 const textVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -19,113 +20,113 @@ const textVariants = {
 const Content = () => (
   <div
     id="home"
-    className="relative w-screen bg-transparent overflow-hidden"
+    className="relative w-screen bg-transparent overflow-hidden min-h-screen"
   >
-  { /* Particle Background on the right side */}
-  {/* <div className=" absolute mt-20 top-1/4 right-60 -translate-y-1/2 z-0 w-[300px] h-[300px] d:w-[180px] md:h-[180px]">
-    <ParticleHeaderBg />
-  </div> */}
-
     <section
       id="home"
-      className="flex justify-center items-center h-full relative z-10"
+      className="flex items-center justify-center min-h-screen relative z-10 pt-24 pb-20"
     >
-      <div className="text-center z-0 mt-40 px-4">
-        <motion.p
-          className="text-white text-4xl font-semibold mb-2"
-          initial="hidden"
-          animate="visible"
-          custom={0}
-          variants={textVariants}
-        >
-          Hello
-        </motion.p>
-        <motion.h1
-          className="text-cyan-400 text-5xl font-bold mb-2"
-          initial="hidden"
-          animate="visible"
-          custom={1}
-          variants={textVariants}
-        >
-          I am Rajat Pandey
-        </motion.h1>
-        <motion.p
-          className="text-white text-3xl font-medium mb-6"
-          initial="hidden"
-          animate="visible"
-          custom={2}
-          variants={textVariants}
-        >
-          Full-stack developer
-        </motion.p>
-        <div className="flex flex-wrap justify-center gap-6 mb-8">
-          {/* LinkedIn */}
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#0077b5] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
+          {/* Left Content - Profile Card */}
+          <motion.div
+            className="flex justify-center lg:justify-start order-2 lg:order-1"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
           >
-            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
-              <i className="fab fa-linkedin-in text-2xl" />
+            <div className="scale-75 sm:scale-90 lg:scale-100 pt-6">
+              <ProfileCard 
+                name="Rajat Pandey"
+                title="Software Engineer"
+                handle="rajatpandey_dev"
+                status="Available for work"
+                avatarUrl="/profile1.png"
+                miniAvatarUrl="/profile1.png"
+                enableTilt={true}
+                enableMobileTilt={false}
+              />
             </div>
-            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
-              LinkedIn
-            </span>
-          </a>
+          </motion.div>
 
-          {/* GitHub */}
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#333] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
-          >
-            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
-              <i className="fab fa-github text-2xl" />
-            </div>
-            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
-              GitHub
-            </span>
-          </a>
-
-          {/* Instagram */}
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#E1306C] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
-          >
-            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
-              <i className="fab fa-instagram text-2xl" />
-            </div>
-            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
-              Instagram
-            </span>
-          </a>
-
-          {/* WhatsApp */}
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center bg-cyan-400 text-black rounded-full shadow-md transition-all duration-300 hover:bg-[#4fc35b] hover:text-white overflow-hidden w-16 hover:w-44 h-16 px-2"
-          >
-            <div className="flex items-center justify-center w-12 h-12 mx-3.5">
-              <i className="fab fa-whatsapp text-2xl" />
-            </div>
-            <span className="whitespace-nowrap text-lg font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2">
-              WhatsApp
-            </span>
-          </a>
+          {/* Right Content - Text */}
+          <div className="text-center lg:text-left order-1 lg:order-2">
+            <motion.h1
+              className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-none"
+              initial="hidden"
+              animate="visible"
+              custom={0}
+              variants={textVariants}
+            >
+              Hi, I'm{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+                Rajat Pandey
+              </span>
+            </motion.h1>
+            
+            <motion.div
+              className="mb-6"
+              initial="hidden"
+              animate="visible"
+              custom={1}
+              variants={textVariants}
+            >
+              <div className="text-gray-300 text-xl md:text-2xl lg:text-3xl font-medium mb-2 min-h-[1.8rem] md:min-h-[2rem] lg:min-h-[2.5rem]">
+                <TextType
+                  text={["Full-Stack Developer", "AI Engineer", "Problem Solver", "Tech Enthusiast"]}
+                  typingSpeed={100}
+                  deletingSpeed={50}
+                  pauseDuration={2000}
+                  textColors={["#06b6d4", "#06b6d4", "#06b6d4", "#06b6d4"]}
+                  className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
+                />
+              </div>
+              <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto lg:mx-0 rounded-full"></div>
+            </motion.div>
+            
+            <motion.p
+              className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              initial="hidden"
+              animate="visible"
+              custom={2}
+              variants={textVariants}
+            >
+              I craft exceptional digital experiences with cutting-edge technologies. 
+              Passionate about creating innovative solutions that make a difference.
+            </motion.p>
+            
+            {/* CTA Button */}
+            <motion.div
+              className="flex justify-center lg:justify-start"
+              initial="hidden"
+              animate="visible"
+              custom={3}
+              variants={textVariants}
+            >
+              <Link to="projects" smooth duration={1000}>
+                <button className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden">
+                  <span className="relative z-10">View My Work</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+              </Link>
+            </motion.div>
+          </div>
         </div>
 
-        <Link to="about" smooth duration={1000}>
-          <div className="h-12 w-8 border-2 border-white mx-auto mt-40 rounded-full relative cursor-pointer animate-bounce">
-            <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45"></div>
-            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45 opacity-60"></div>
-          </div>
-        </Link>
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-4 lg:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+        >
+          <Link to="about" smooth duration={1000}>
+            <div className="h-12 w-8 border-2 border-white mx-auto rounded-full relative cursor-pointer animate-bounce hover:border-cyan-400 transition-colors">
+              <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45"></div>
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45 opacity-60"></div>
+            </div>
+          </Link>
+        </motion.div>
       </div>
     </section>
   </div>

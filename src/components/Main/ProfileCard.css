@@ -2,11 +2,7 @@
   --pointer-x: 50%;
   --pointer-y: 50%;
   --pointer-from-center: 0;
- .rb-card:hover,
-.rb-card.active {
-  transition: none;
-  transform: translate3d(0, 0, 0.1px) rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
-}-from-top: 0.5;
+  --pointer-from-top: 0.5;
   --pointer-from-left: 0.5;
   --card-opacity: 0;
   --rotate-x: 0deg;
@@ -47,8 +43,8 @@
   background-position: inherit;
   border-radius: inherit;
   transition: all 0.3s ease;
-  filter: contrast(1.2) saturate(1.8) blur(25px) opacity(var(--card-opacity, 0.4));
-  transform: scale(0.85) translate3d(0, 0, 0.1px);
+  filter: contrast(1.1) saturate(1.2) blur(8px) opacity(var(--card-opacity, 0.2));
+  transform: scale(0.95) translate3d(0, 0, 0.1px);
   background-size: 100% 100%;
   background-image: var(--behind-gradient);
 }
@@ -60,8 +56,8 @@
 
 .rb-card-wrapper:hover::before,
 .rb-card-wrapper.active::before {
-  filter: contrast(1.1) saturate(1.2) blur(30px) opacity(0.3);
-  transform: scale(0.95) translate3d(0, 0, 0.1px);
+  filter: contrast(1.05) saturate(1.1) blur(10px) opacity(0.15);
+  transform: scale(0.98) translate3d(0, 0, 0.1px);
 }
 
 .rb-card {
@@ -72,7 +68,7 @@
   border-radius: var(--card-radius);
   position: relative;
   background-blend-mode: color-dodge, normal, normal, normal;
-  box-shadow: rgba(0, 0, 0, 0.3) calc((var(--pointer-from-left) * 8px) - 4px) calc((var(--pointer-from-top) * 12px) - 6px) 20px -5px;
+  box-shadow: rgba(0, 0, 0, 0.15) calc((var(--pointer-from-left) * 4px) - 2px) calc((var(--pointer-from-top) * 6px) - 3px) 10px -2px;
   transition: transform 0.1s ease-out;
   transform: translate3d(0, 0, 0.1px) rotateX(calc(var(--rotate-y) * 0.4)) rotateY(calc(var(--rotate-x) * 0.4));
   background-size: 100% 100%;
@@ -85,12 +81,11 @@
 .rb-card:hover,
 .rb-card.active {
   transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
-  transform: translate3d(0, -10px, 0.1px) rotateX(0deg) rotateY(0deg) scale(1.02);
+  transform: translate3d(0, -5px, 0.1px) rotateX(0deg) rotateY(0deg) scale(1.01);
   box-shadow: 
-    rgba(0, 0, 0, 0.4) 0px 25px 60px -5px,
-    rgba(59, 130, 246, 0.3) 0px 0px 40px -10px,
-    rgba(139, 92, 246, 0.2) 0px 0px 60px -15px;
-  filter: brightness(1.1) saturate(1.2);
+    rgba(0, 0, 0, 0.2) 0px 10px 25px -2px,
+    rgba(59, 130, 246, 0.1) 0px 0px 15px -5px;
+  filter: brightness(1.05) saturate(1.1);
 }
 
 .rb-card * {
