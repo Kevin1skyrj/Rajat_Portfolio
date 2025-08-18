@@ -36,7 +36,7 @@ export default function About() {
                 status="Available for work"
                 avatarUrl="/profile1.png"
                 miniAvatarUrl="/profile1.png"
-                enableTilt={false}
+                enableTilt={true}
                 enableMobileTilt={false}
               />
             </div>

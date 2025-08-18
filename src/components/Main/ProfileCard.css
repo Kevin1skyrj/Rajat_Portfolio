@@ -2,7 +2,11 @@
   --pointer-x: 50%;
   --pointer-y: 50%;
   --pointer-from-center: 0;
-  --pointer-from-top: 0.5;
+ .rb-card:hover,
+.rb-card.active {
+  transition: none;
+  transform: translate3d(0, 0, 0.1px) rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
+}-from-top: 0.5;
   --pointer-from-left: 0.5;
   --card-opacity: 0;
   --rotate-x: 0deg;
@@ -42,22 +46,22 @@
   background: inherit;
   background-position: inherit;
   border-radius: inherit;
-  transition: all 0.5s ease;
-  filter: contrast(1) saturate(1.5) blur(20px) opacity(0.3);
-  transform: scale(0.8) translate3d(0, 0, 0.1px);
+  transition: all 0.3s ease;
+  filter: contrast(1.2) saturate(1.8) blur(25px) opacity(var(--card-opacity, 0.4));
+  transform: scale(0.85) translate3d(0, 0, 0.1px);
   background-size: 100% 100%;
   background-image: var(--behind-gradient);
 }
 
 .rb-card-wrapper:hover,
 .rb-card-wrapper.active {
-  --card-opacity: 0.6;
+  --card-opacity: 1;
 }
 
 .rb-card-wrapper:hover::before,
 .rb-card-wrapper.active::before {
-  filter: contrast(1) saturate(1.5) blur(25px) opacity(0.5);
-  transform: scale(0.85) translate3d(0, 0, 0.1px);
+  filter: contrast(1.5) saturate(2.5) blur(35px) opacity(1);
+  transform: scale(0.95) translate3d(0, 0, 0.1px);
 }
 
 .rb-card {
@@ -67,21 +71,26 @@
   aspect-ratio: 0.718;
   border-radius: var(--card-radius);
   position: relative;
-  background-blend-mode: normal;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px -5px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg);
+  background-blend-mode: color-dodge, normal, normal, normal;
+  box-shadow: rgba(0, 0, 0, 0.5) calc((var(--pointer-from-left) * 15px) - 7px) calc((var(--pointer-from-top) * 25px) - 12px) 35px -8px;
+  transition: transform 0.1s ease-out;
+  transform: translate3d(0, 0, 0.1px) rotateX(calc(var(--rotate-y) * 0.8)) rotateY(calc(var(--rotate-x) * 0.8));
   background-size: 100% 100%;
   background-position: 0 0, 0 0, 50% 50%, 0 0;
-  background-image: radial-gradient(farthest-side circle at 50% 50%, hsla(266, 100%, 90%, 0.3) 4%, hsla(266, 50%, 80%, 0.2) 10%, hsla(266, 25%, 70%, 0.1) 50%, hsla(266, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaa44 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ff88 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ff88 0%, #07c6ff88 40%, #07c6ff88 60%, #c137ff88 100%);
+  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 90%, var(--card-opacity)) 4%, hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaa88 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ffaa 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ffaa 0%, #07c6ffaa 40%, #07c6ffaa 60%, #c137ffaa 100%);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .rb-card:hover,
 .rb-card.active {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 40px -5px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
+  transform: translate3d(0, -10px, 0.1px) rotateX(0deg) rotateY(0deg) scale(1.02);
+  box-shadow: 
+    rgba(0, 0, 0, 0.4) 0px 25px 60px -5px,
+    rgba(59, 130, 246, 0.3) 0px 0px 40px -10px,
+    rgba(139, 92, 246, 0.2) 0px 0px 60px -15px;
+  filter: brightness(1.1) saturate(1.2);
 }
 
 .rb-card * {
@@ -101,8 +110,8 @@
 }
 
 .rb-shine {
-  transition: filter 0.6s ease;
-  filter: brightness(0.8) contrast(1.2) saturate(0.4) opacity(0.3);
+  transition: filter 0.2s ease, opacity 0.2s ease;
+  filter: brightness(0.9) contrast(1.3) saturate(0.6) opacity(0.4);
   mix-blend-mode: overlay;
   --space: 5%;
   --angle: -45deg;
@@ -112,8 +121,8 @@
   background: transparent;
   background-size: cover;
   background-position: center;
-  background-image: repeating-linear-gradient(0deg, var(--sunpillar-clr-1) calc(var(--space) * 1), var(--sunpillar-clr-2) calc(var(--space) * 2), var(--sunpillar-clr-3) calc(var(--space) * 3), var(--sunpillar-clr-4) calc(var(--space) * 4), var(--sunpillar-clr-5) calc(var(--space) * 5), var(--sunpillar-clr-6) calc(var(--space) * 6), var(--sunpillar-clr-1) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at 50% 50%, hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%);
-  background-position: 0 50%, 50% 50%, center;
+  background-image: repeating-linear-gradient(0deg, var(--sunpillar-clr-1) calc(var(--space) * 1), var(--sunpillar-clr-2) calc(var(--space) * 2), var(--sunpillar-clr-3) calc(var(--space) * 3), var(--sunpillar-clr-4) calc(var(--space) * 4), var(--sunpillar-clr-5) calc(var(--space) * 5), var(--sunpillar-clr-6) calc(var(--space) * 6), var(--sunpillar-clr-1) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.05) 12%, hsla(0, 0%, 0%, 0.1) 20%, hsla(0, 0%, 0%, 0.15) 120%);
+  background-position: 0 var(--background-y), var(--background-x) var(--background-y), center;
   background-blend-mode: color, hard-light;
   background-size: 500% 500%, 300% 300%, 200% 200%;
   background-repeat: repeat;
@@ -130,7 +139,7 @@
 
 .rb-card:hover .rb-shine,
 .rb-card.active .rb-shine {
-  filter: brightness(0.9) contrast(1.3) saturate(0.6) opacity(0.4);
+  filter: brightness(1.1) contrast(1.4) saturate(0.7) opacity(0.5);
 }
 
 .rb-card:hover .rb-shine::before,
@@ -159,9 +168,9 @@
 .rb-glare {
   transform: translate3d(0, 0, 1.1px);
   overflow: hidden;
-  background-image: radial-gradient(farthest-corner circle at 50% 50%, hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.3) 90%);
+  background-image: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.4) 90%);
   mix-blend-mode: overlay;
-  filter: brightness(0.9) contrast(1.1);
+  filter: brightness(1.0) contrast(1.1);
   z-index: 4;
 }
 
@@ -208,6 +217,14 @@
   border-radius: 15px;
   padding: 12px 14px;
   pointer-events: auto;
+  transition: all 0.1s ease;
+  transform: translateY(calc(var(--pointer-from-top) * -2px));
+}
+
+.rb-card:hover .rb-user-info {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .rb-user-details {
@@ -260,15 +277,33 @@
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.rb-contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
 }
 
 .rb-contact-btn:hover {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: rgba(59, 130, 246, 1);
   transform: translateY(-1px);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.rb-contact-btn:hover::before {
+  left: 100%;
 }
 
 .rb-content {
@@ -276,7 +311,7 @@
   overflow: hidden;
   text-align: center;
   position: relative;
-  transform: translate3d(0, 0, 0.1px) !important;
+  transform: translate3d(calc(var(--pointer-from-left) * -8px + 4px), calc(var(--pointer-from-top) * -8px + 4px), 0.1px) !important;
   z-index: 5;
   mix-blend-mode: luminosity;
 }
@@ -287,33 +322,45 @@
   top: 3em;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .rb-details h3 {
   font-weight: 600;
   margin: 0;
   font-size: min(5svh, 3em);
-  margin: 0;
-  background-image: linear-gradient(to bottom, #fff, #6f6fbe);
-  background-size: 1em 1.5em;
+  background-image: linear-gradient(135deg, #fff 0%, #a78bfa 50%, #06b6d4 100%);
+  background-size: 200% 200%;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  transition: all 0.1s ease;
+  line-height: 1.1;
+}
+
+.rb-card:hover .rb-details h3 {
+  transform: scale(calc(1 + var(--pointer-from-center) * 0.03));
 }
 
 .rb-details p {
   font-weight: 600;
   position: relative;
-  top: -12px;
+  top: 0;
   white-space: nowrap;
   font-size: 16px;
   margin: 0 auto;
   width: min-content;
-  background-image: linear-gradient(to bottom, #fff, #4a4ac0);
-  background-size: 1em 1.5em;
+  background-image: linear-gradient(135deg, #e2e8f0 0%, #06b6d4 50%, #8b5cf6 100%);
+  background-size: 200% 200%;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  transition: all 0.1s ease;
+  line-height: 1.2;
+}
+
+.rb-card:hover .rb-details p {
+  transform: scale(calc(1 + var(--pointer-from-center) * 0.02));
 }
 
 @keyframes glow-bg {
@@ -333,6 +380,47 @@
 
   100% {
     background-position: 0 var(--background-y), 90% 90%, center;
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    filter: contrast(1.2) saturate(2) blur(30px) opacity(0.6);
+    transform: scale(0.85) translate3d(0, 0, 0.1px);
+  }
+  100% {
+    filter: contrast(1.4) saturate(2.5) blur(35px) opacity(1);
+    transform: scale(0.95) translate3d(0, 0, 0.1px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%, 0% 50%, center;
+  }
+  50% {
+    background-position: 100% 50%, 50% 50%, center;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, center;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0.1px);
+  }
+  50% {
+    transform: translate3d(0, -5px, 0.1px);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
