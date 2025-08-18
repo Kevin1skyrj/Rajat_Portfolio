@@ -102,19 +102,19 @@ const Timeline = () => {
                     }`}
                   >
                     {isLeft && (
-                      <div className="max-w-xs bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300 text-right">
-                        <div className="flex items-center justify-end gap-2 text-blue-300 font-medium mb-1">
-                          <Calendar size={14} />
-                          <span className="text-xs">{item.year}</span>
+                      <div className="max-w-sm bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300 text-right">
+                        <div className="flex items-center justify-end gap-2 text-blue-300 font-medium mb-2">
+                          <Calendar size={15} />
+                          <span className="text-sm">{item.year}</span>
                         </div>
-                        <h3 className="text-base font-bold text-white mb-1">
+                        <h3 className="text-lg font-bold text-white mb-2">
                           {item.title}
                         </h3>
-                        <div className="flex items-center justify-end gap-2 text-purple-300 font-medium mb-1">
-                          <MapPin size={12} />
-                          <span className="text-xs">{item.company}</span>
+                        <div className="flex items-center justify-end gap-2 text-purple-300 font-medium mb-2">
+                          <MapPin size={13} />
+                          <span className="text-sm">{item.company}</span>
                         </div>
-                        <p className="text-gray-300 leading-relaxed text-xs">
+                        <p className="text-gray-300 leading-relaxed text-sm">
                           {item.description}
                         </p>
                       </div>
@@ -135,19 +135,19 @@ const Timeline = () => {
                     }`}
                   >
                     {!isLeft && (
-                      <div className="max-w-xs bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300 text-left">
-                        <div className="flex items-center gap-2 text-blue-300 font-medium mb-1">
-                          <Calendar size={14} />
-                          <span className="text-xs">{item.year}</span>
+                      <div className="max-w-sm bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300 text-left">
+                        <div className="flex items-center gap-2 text-blue-300 font-medium mb-2">
+                          <Calendar size={15} />
+                          <span className="text-sm">{item.year}</span>
                         </div>
-                        <h3 className="text-base font-bold text-white mb-1">
+                        <h3 className="text-lg font-bold text-white mb-2">
                           {item.title}
                         </h3>
-                        <div className="flex items-center gap-2 text-purple-300 font-medium mb-1">
-                          <MapPin size={12} />
-                          <span className="text-xs">{item.company}</span>
+                        <div className="flex items-center gap-2 text-purple-300 font-medium mb-2">
+                          <MapPin size={13} />
+                          <span className="text-sm">{item.company}</span>
                         </div>
-                        <p className="text-gray-300 leading-relaxed text-xs">
+                        <p className="text-gray-300 leading-relaxed text-sm">
                           {item.description}
                         </p>
                       </div>
@@ -158,19 +158,19 @@ const Timeline = () => {
                   <div className="md:hidden flex flex-row items-start gap-3 ml-2">
                     {/* Dot is already rendered above */}
                     <div className="flex-1">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300">
-                        <div className="flex items-center gap-2 text-blue-300 font-medium mb-1">
-                          <Calendar size={12} />
-                          <span className="text-xs">{item.year}</span>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300">
+                        <div className="flex items-center gap-2 text-blue-300 font-medium mb-2">
+                          <Calendar size={13} />
+                          <span className="text-sm">{item.year}</span>
                         </div>
-                        <h3 className="text-sm font-bold text-white mb-1">
+                        <h3 className="text-base font-bold text-white mb-2">
                           {item.title}
                         </h3>
-                        <div className="flex items-center gap-2 text-purple-300 font-medium mb-1">
-                          <MapPin size={10} />
-                          <span className="text-xs">{item.company}</span>
+                        <div className="flex items-center gap-2 text-purple-300 font-medium mb-2">
+                          <MapPin size={11} />
+                          <span className="text-sm">{item.company}</span>
                         </div>
-                        <p className="text-gray-300 leading-relaxed text-xs">
+                        <p className="text-gray-300 leading-relaxed text-sm">
                           {item.description}
                         </p>
                       </div>
