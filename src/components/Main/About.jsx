@@ -1,6 +1,7 @@
 import { Calendar, MapPin, Briefcase, GraduationCap, Heart, User } from "lucide-react";
 import { motion } from "framer-motion";
 import Timeline from "./Timeline";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 export default function About() {
   const containerVariants = {
@@ -82,7 +83,28 @@ export default function About() {
               className="mb-16 md:mb-20"
             >
               <div className="max-w-4xl mx-auto px-4 sm:px-6">
-                <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12">
+                <div className="relative overflow-hidden bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12">
+                  <BorderBeam
+                    size={60}
+                    duration={6}
+                    colorFrom="#06b6d4"
+                    colorTo="#7c3aed"
+                    borderWidth={2}
+                    className="opacity-90 pointer-events-none"
+                  />
+                  {/* Additional beams to match MusicPlayer effect */}
+                  <BorderBeam
+                    duration={6}
+                    size={400}
+                    className="from-transparent via-red-500 to-transparent pointer-events-none"
+                  />
+                  <BorderBeam
+                    duration={6}
+                    delay={3}
+                    size={400}
+                    borderWidth={2}
+                    className="from-transparent via-blue-500 to-transparent pointer-events-none"
+                  />
                   <div className="flex items-center gap-3 mb-6 md:mb-8">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
                       <User className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
