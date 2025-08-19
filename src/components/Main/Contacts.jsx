@@ -47,7 +47,7 @@ export default function Contacts() {
     <>
       <section
         id="contacts"
-        className=" pt-24 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
+        className=" pt-16 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
       >
         <div className="container mx-auto px-4 ">
           <div className="text-center mb-16">

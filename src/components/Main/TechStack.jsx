@@ -1,164 +1,171 @@
-import { motion } from "framer-motion";
-export default function TechStack() {
-  const technologies = [
-    {
-      category: "Frontend",
-      items: [
-        {
-          name: "HTML5",
-          icon: "/techstack icons/html5.svg?height=80&width=80",
-          color: "bg-orange-100 dark:bg-orange-900/20",
-        },
-        {
-          name: "CSS3",
-          icon: "/techstack icons/css3.svg?height=80&width=80",
-          color: "bg-blue-100 dark:bg-blue-900/20",
-        },
-        {
-          name: "JavaScript",
-          icon: "/techstack icons/javascript.svg?height=80&width=80",
-          color: "bg-yellow-100 dark:bg-yellow-900/20",
-        },
-        {
-          name: "React",
-          icon: "/techstack icons/react.svg?height=80&width=80",
-          color: "bg-cyan-100 dark:bg-cyan-900/20",
-        },
-        {
-          name: "Tailwind CSS",
-          icon: "/techstack icons/tailwindcss.svg?height=80&width=80",
-          color: "bg-teal-100 dark:bg-teal-900/20",
-        },
-        {
-          name: "Vite",
-          icon: "/techstack icons/vite.svg?height=80&width=80",
-          color: "bg-purple-100 dark:bg-purple-900/20",
-        },
-      ],
-    },
-    {
-      category: "Backend",
-      items: [
-        {
-          name: "Node.js",
-          icon: "/techstack icons/nodejs.svg?height=80&width=80",
-          color: "bg-green-100 dark:bg-green-900/20",
-        },
-        {
-          name: "Express",
-          icon: "/techstack icons/express.svg?height=80&width=80",
-          color: "bg-gray-100 dark:bg-gray-700/30",
-        },
-        {
-          name: "MongoDB",
-          icon: "/techstack icons/mongo.svg?height=80&width=80",
-          color: "bg-green-100 dark:bg-green-900/20",
-        },
-        {
-          name: "Firebase",
-          icon: "/techstack icons/firebase.svg?height=80&width=80",
-          color: "bg-amber-100 dark:bg-amber-900/20",
-        },
-      ],
-    },
-    {
-      category: "Tools & Others",
-      items: [
-        {
-          name: "Git",
-          icon: "/techstack icons/git-icon.svg?height=80&width=80",
-          color: "bg-red-100 dark:bg-red-900/20",
-        },
-        {
-          name: "GitHub",
-          icon: "/techstack icons/github.svg?height=80&width=80",
-          color: "bg-gray-100 dark:bg-gray-700/30",
-        },
-        {
-          name: "VS Code",
-          icon: "/techstack icons/vs-code.svg?height=80&width=80",
-          color: "bg-blue-100 dark:bg-blue-900/20",
-        },
-        {
-          name: "Figma",
-          icon: "/techstack icons/figma.svg?height=80&width=80",
-          color: "bg-purple-100 dark:bg-purple-900/20",
-        },
-        {
-          name: "Netlify",
-          icon: "/techstack icons/netlify.svg?height=80&width=80",
-          color: "bg-teal-100 dark:bg-teal-900/20",
-        },
-        {
-          name: "Vercel",
-          icon: "/techstack icons/vercel.svg?height=80&width=80",
-          color: "bg-gray-100 dark:bg-gray-700/30",
-        },
-      ],
-    },
-  ];
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/magicui/marquee";
 
+const technologies = [
+  {
+    name: "HTML5",
+    icon: "/techstack icons/html5.svg",
+    color: "bg-orange-500/20",
+  },
+  {
+    name: "CSS3",
+    icon: "/techstack icons/css3.svg",
+    color: "bg-blue-500/20",
+  },
+  {
+    name: "JavaScript",
+    icon: "/techstack icons/javascript.svg",
+    color: "bg-yellow-500/20",
+  },
+  {
+    name: "React",
+    icon: "/techstack icons/react.svg",
+    color: "bg-cyan-500/20",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "/techstack icons/tailwindcss.svg",
+    color: "bg-teal-500/20",
+  },
+  {
+    name: "Vite",
+    icon: "/techstack icons/vite.svg",
+    color: "bg-purple-500/20",
+  },
+  {
+    name: "Node.js",
+    icon: "/techstack icons/nodejs.svg",
+    color: "bg-green-500/20",
+  },
+  {
+    name: "Express",
+    icon: "/techstack icons/express.svg",
+    color: "bg-gray-500/20",
+  },
+  {
+    name: "MongoDB",
+    icon: "/techstack icons/mongo.svg",
+    color: "bg-green-600/20",
+  },
+  {
+    name: "Firebase",
+    icon: "/techstack icons/firebase.svg",
+    color: "bg-amber-500/20",
+  },
+  {
+    name: "Git",
+    icon: "/techstack icons/git-icon.svg",
+    color: "bg-red-500/20",
+  },
+  {
+    name: "GitHub",
+    icon: "/techstack icons/github.svg",
+    color: "bg-gray-600/20",
+  },
+  {
+    name: "VS Code",
+    icon: "/techstack icons/vs-code.svg",
+    color: "bg-blue-600/20",
+  },
+  {
+    name: "Figma",
+    icon: "/techstack icons/figma.svg",
+    color: "bg-purple-600/20",
+  },
+  {
+    name: "Netlify",
+    icon: "/techstack icons/netlify.svg",
+    color: "bg-teal-600/20",
+  },
+  {
+    name: "Vercel",
+    icon: "/techstack icons/vercel.svg",
+    color: "bg-black/20",
+  },
+];
+
+// Split technologies into two rows with exactly 8 icons each
+const firstRow = technologies.slice(0, 8);
+const secondRow = technologies.slice(8, 16);
+
+const TechCard = ({ icon, name, color }) => {
   return (
-    <section
-      id="tech-stack"
-      className="py-20 bg-transparent dark:from-[#0a192f] dark:via-[#232946] dark:to-[#1f243c]"
+    <div
+      className={cn(
+        "relative flex h-32 w-40 cursor-pointer items-center justify-center rounded-xl border p-4 flex-shrink-0",
+        "border-gray-200/20 bg-gray-900/40 backdrop-blur-sm",
+        "hover:bg-gray-800/60 hover:scale-105 transition-all duration-300",
+        "group"
+      )}
     >
+      <div className="flex flex-col items-center gap-3">
+        <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center", color)}>
+          <img
+            src={icon}
+            alt={name}
+            className="w-12 h-12 object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
+          />
+        </div>
+        <span className="text-sm font-medium text-gray-200 text-center leading-tight">
+          {name}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default function TechStack() {
+  return (
+    <section id="tech-stack" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#15e2e5] to-[#232946] bg-clip-text text-cyan-400 dark:from-[#15e2e5] dark:to-white"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cyan-400">
             My Tech Stack
-          </motion.h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#15e2e5] to-[#232946] mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-200 font-normal  max-w-2xl mx-auto">
-            These are the technologies, frameworks, and tools I work with to
-            build modern web applications.
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto mb-6 rounded-full"></div>
+          <p className="text-gray-300 font-normal max-w-2xl mx-auto text-lg">
+            Technologies, frameworks, and tools I use to build modern web applications
           </p>
         </div>
 
-        <div className="space-y-16 max-w-6xl mx-auto">
-          {technologies.map((tech, index) => (
-            <div key={index}>
-              <h3 className="text-2xl font-bold mb-8 text-center text-white">
-                {tech.category}
-              </h3>
-
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                {tech.items.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    className="flex flex-col items-center group"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.08 }}
-                    whileHover={{ scale: 1.08 }}
-                    viewport={{ once: true }}
-                  >
-                    <div
-                      className={`w-20 h-20 ${item.color} rounded-xl flex items-center justify-center mb-3 shadow-sm group-hover:shadow-[0_0_16px_4px_rgba(21,226,229,0.25)] transition-shadow duration-300`}
-                    >
-                      <img
-                        src={item.icon || "/placeholder.svg"}
-                        alt={item.name}
-                        className="w-10 h-10"
-                      />
-                    </div>
-                    <span className="font-medium text-white bg-clip-text ">
-                      {item.name}
-                    </span>
-                  </motion.div>
+        {/* Marquee Container */}
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg ">
+          {/* First Row - Left to Right */}
+          <div className="w-full mb-6">
+            <Marquee 
+              pauseOnHover 
+              className="[--duration:25s] [--gap:1rem]" 
+              repeat={4}
+            >
+              <div className="flex flex-row gap-4">
+                {firstRow.map((tech, index) => (
+                  <TechCard key={`first-${tech.name}-${index}`} {...tech} />
                 ))}
               </div>
-            </div>
-          ))}
-        </div>
+            </Marquee>
+          </div>
 
-       
+          {/* Second Row - Right to Left */}
+          <div className="w-full">
+            <Marquee 
+              reverse 
+              pauseOnHover 
+              className="[--duration:25s] [--gap:1rem]" 
+              repeat={4}
+            >
+              <div className="flex flex-row gap-4">
+                {secondRow.map((tech, index) => (
+                  <TechCard key={`second-${tech.name}-${index}`} {...tech} />
+                ))}
+              </div>
+            </Marquee>
+          </div>
+
+          {/* Fade Gradients */}
+          {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-gray-900/80 to-transparent"></div> */}
+        </div>
       </div>
     </section>
   );

@@ -168,7 +168,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-10 sm:py-16 lg:py-24 bg-transparent relative overflow-hidden"
+      className= "bg-transparent relative overflow-hidden"
     >
       <div>
         <ScroolToTop />
@@ -423,7 +423,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mt-12 sm:mt-16 lg:mt-20"
+          className="text-center"
         >
           <div className="space-y-4 sm:space-y-6">
             <p className="text-slate-300 text-base sm:text-lg px-4">
