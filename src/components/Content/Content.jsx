@@ -52,14 +52,14 @@ const Content = () => (
           {/* Right Content - Text */}
           <div className="text-center lg:text-left order-1 lg:order-2">
             <motion.h1
-              className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-none"
+              className="text-white text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-none"
               initial="hidden"
               animate="visible"
               custom={0}
               variants={textVariants}
             >
               Hi, I'm{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+              <span className=" bg-clip-text text-cyan-400">
                 Rajat Pandey
               </span>
             </motion.h1>
@@ -104,7 +104,7 @@ const Content = () => (
               variants={textVariants}
             >
               <Link to="projects" smooth duration={1000}>
-                <button className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden">
+                <button className=" cursor-pointer group bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden">
                   <span className="relative z-10">View My Work</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>

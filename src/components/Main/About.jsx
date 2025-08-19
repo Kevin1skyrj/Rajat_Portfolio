@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 bg-transparent relative overflow-hidden min-h-screen"
+      className="py-10 bg-transparent relative overflow-hidden min-h-screen"
     >
       <motion.div
         variants={containerVariants}
@@ -54,11 +54,11 @@ export default function About() {
             </motion.div>
             
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight"
               variants={itemVariants}
             >
               About{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+              <span className="text-cyan-400">
                 Me
               </span>
             </motion.h2>

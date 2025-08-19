@@ -62,7 +62,7 @@ const Timeline = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="py-6 md:py-10 bg-transparent px-2" ref={timelineRef}>
+    <section className="py-2 md:py-4 bg-transparent px-2" ref={timelineRef}>
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 md:mb-10">

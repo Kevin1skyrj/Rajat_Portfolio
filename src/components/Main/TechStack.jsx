@@ -158,53 +158,7 @@ export default function TechStack() {
           ))}
         </div>
 
-        {/* Experience Bar */}
-        {/* <div className="mt-20 max-w-4xl mx-auto text-white">
-          <h3 className="text-2xl font-bold mb-8 text-center">
-            Experience Level
-          </h3>
-
-          <div className="space-y-6">
-            {[
-              { name: "Frontend Development", level: 90 },
-              { name: "Backend Development", level: 75 },
-              { name: "UI/UX Design", level: 65 },
-              { name: "Mobile Development", level: 60 },
-            ].map((skill, index) => (
-              <motion.div
-                key={index}
-               className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-md text-white border border-white/20 space-y-2"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px 4px 24px #15e2e580",
-                }}
-                viewport={{ once: true }}
-              >
-                <div className="flex justify-between">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-[#0c94e3] font-semibold">
-                    {skill.level}%
-                  </span>
-                </div>
-                <div className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
-                    style={{
-                      background:
-                        "linear-gradient(90deg, #0c94e3 0%, #38bdf8 50%, #6366f1 100%)",
-                    }}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div> */}
+       
       </div>
     </section>
   );
