@@ -1,4 +1,4 @@
-import React, { useState, useRef, forwardRef } from "react";
+import React, { useState, useRef, forwardRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // keep a lint-legal reference to motion (some linters flag unused imports)
@@ -7,7 +7,7 @@ import { Code2, Palette, Database, Globe, Cpu, LineChart } from "lucide-react";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 
 // Reusable circular icon wrapper (matches demo)
-const Circle = forwardRef(({ className, children }, ref) => {
+const Circle = forwardRef(({ className, children, style }, ref) => {
   return (
     <motion.div
       ref={ref}
@@ -16,6 +16,7 @@ const Circle = forwardRef(({ className, children }, ref) => {
       whileHover={{ scale: 1.06 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300, damping: 18 }}
+      style={style}
       className={
         "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white/6 p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] hover:cursor-pointer " +
         (className || "")
@@ -70,6 +71,29 @@ export default function Services() {
   const div5Ref = useRef(null);
   const div6Ref = useRef(null);
   const div7Ref = useRef(null);
+  const [isNarrow, setIsNarrow] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1024
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const onChange = (e) => setIsNarrow(e.matches);
+    setIsNarrow(mq.matches);
+    if (mq.addEventListener) mq.addEventListener("change", onChange);
+    else mq.addListener(onChange);
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener("change", onChange);
+      else mq.removeListener(onChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", onResize);
+    onResize();
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   return (
     <section
@@ -151,71 +175,278 @@ export default function Services() {
         <div className="mt-4">
           <div
             ref={beamContainerRef}
-            className="relative flex h-[420px] w-full items-center justify-center overflow-hidden p-6"
+            className="relative flex h-[420px] w-full items-center justify-center overflow-hidden p-1"
           >
             <div className="flex size-full max-w-lg flex-row items-stretch justify-between gap-10 z-10">
               {/* Left: Development (centered caption) */}
               <div className="flex flex-col justify-center items-center">
-                <Circle ref={div7Ref} className="bg-cyan-500/10 border-cyan-400/20 p-3">
-                  <Code2 className="w-6 h-6 text-white" />
-                </Circle>
+                {(() => {
+                  const leftShift =
+                    screenWidth <= 325
+                      ? -12
+                      : screenWidth <= 375
+                      ? -10
+                      : screenWidth <= 425
+                      ? -6
+                      : 0;
+                  const iconSize =
+                    screenWidth <= 325
+                      ? "w-5 h-5"
+                      : screenWidth <= 375
+                      ? "w-5 h-5"
+                      : screenWidth <= 425
+                      ? "w-6 h-6"
+                      : "w-6 h-6";
+                  return (
+                    <Circle
+                      ref={div7Ref}
+                      className="bg-cyan-500/10 border-cyan-400/20 p-3"
+                      style={{ marginLeft: leftShift }}
+                    >
+                      <Code2 className={`${iconSize} text-white`} />
+                    </Circle>
+                  );
+                })()}
                 <span className="text-sm text-gray-300 mt-2">Development</span>
               </div>
 
               {/* Center: Web (centered caption) */}
               <div className="flex flex-col justify-center items-center">
-                <Circle ref={div6Ref} className="size-16 bg-emerald-400/8 border-emerald-300/20 p-4">
-                  <Globe className="w-8 h-8 text-white" />
-                </Circle>
-                <span className="text-sm text-gray-300 mt-2">Responsive Web</span>
+                {(() => {
+                  const centerShift =
+                    screenWidth <= 325
+                      ? -8
+                      : screenWidth <= 375
+                      ? -6
+                      : screenWidth <= 425
+                      ? -4
+                      : 0;
+                  const iconSize =
+                    screenWidth <= 325
+                      ? "w-6 h-6"
+                      : screenWidth <= 375
+                      ? "w-6 h-6"
+                      : screenWidth <= 425
+                      ? "w-7 h-7"
+                      : "w-8 h-8";
+                  return (
+                    <Circle
+                      ref={div6Ref}
+                      className="size-16 bg-emerald-400/8 border-emerald-300/20 p-4"
+                      style={{ marginLeft: centerShift }}
+                    >
+                      <Globe className={`${iconSize} text-white`} />
+                    </Circle>
+                  );
+                })()}
+                <span className="text-sm text-gray-300 mt-2">
+                  Responsive Web
+                </span>
               </div>
 
               {/* Right column: icons with side-by-side labels (fixed column to keep circles centered) */}
               <div className="flex flex-col justify-center gap-4 items-center w-44">
                 <div className="flex items-center gap-3 w-full max-w-[160px]">
-                  <Circle ref={div1Ref} className="bg-white/5 flex-shrink-0 ml-16">
-                    <Cpu className="w-6 h-6 text-white" />
-                  </Circle>
+                  {(() => {
+                    // pick small left offset to avoid clipping on tiny screens
+                    const mlPx =
+                      screenWidth <= 325
+                        ? 8
+                        : screenWidth <= 375
+                        ? 12
+                        : screenWidth <= 425
+                        ? 16
+                        : 16;
+                    const iconSize =
+                      screenWidth <= 325
+                        ? "w-4 h-4"
+                        : screenWidth <= 375
+                        ? "w-4 h-4"
+                        : screenWidth <= 425
+                        ? "w-4 h-4"
+                        : "w-4 h-4";
+                    return (
+                      <Circle
+                        ref={div1Ref}
+                        className="bg-white/5 flex-shrink-0"
+                        style={{ marginLeft: mlPx }}
+                      >
+                        <Cpu className={`${iconSize} text-white`} />
+                      </Circle>
+                    );
+                  })()}
                   <span className="text-sm text-gray-300">Performance</span>
                 </div>
 
                 <div className="flex items-center gap-3 w-full max-w-[160px]">
-                  <Circle ref={div2Ref} className="bg-amber-400/8 border-amber-300/20 flex-shrink-0 ml-16">
-                    <LineChart className="w-6 h-6 text-white" />
-                  </Circle>
+                  {(() => {
+                    const mlPx =
+                      screenWidth <= 325
+                        ? 8
+                        : screenWidth <= 375
+                        ? 12
+                        : screenWidth <= 425
+                        ? 16
+                        : 16;
+                    const iconSize =
+                      screenWidth <= 325
+                        ? "w-5 h-5"
+                        : screenWidth <= 375
+                        ? "w-5 h-5"
+                        : screenWidth <= 425
+                        ? "w-6 h-6"
+                        : "w-6 h-6";
+                    return (
+                      <Circle
+                        ref={div2Ref}
+                        className="bg-amber-400/8 border-amber-300/20 flex-shrink-0"
+                        style={{ marginLeft: mlPx }}
+                      >
+                        <LineChart className={`${iconSize} text-white`} />
+                      </Circle>
+                    );
+                  })()}
                   <span className="text-sm text-gray-300">Analytics</span>
                 </div>
 
                 <div className="flex items-center gap-3 w-full max-w-[160px]">
-                  <Circle ref={div3Ref} className="bg-white/5 flex-shrink-0 ml-16">
-                    <Code2 className="w-6 h-6 text-white" />
-                  </Circle>
+                  {(() => {
+                    const mlPx =
+                      screenWidth <= 325
+                        ? 8
+                        : screenWidth <= 375
+                        ? 12
+                        : screenWidth <= 425
+                        ? 16
+                        : 16;
+                    const iconSize =
+                      screenWidth <= 325
+                        ? "w-5 h-5"
+                        : screenWidth <= 375
+                        ? "w-5 h-5"
+                        : screenWidth <= 425
+                        ? "w-6 h-6"
+                        : "w-6 h-6";
+                    return (
+                      <Circle
+                        ref={div3Ref}
+                        className="bg-white/5 flex-shrink-0"
+                        style={{ marginLeft: mlPx }}
+                      >
+                        <Code2 className={`${iconSize} text-white`} />
+                      </Circle>
+                    );
+                  })()}
                   <span className="text-sm text-gray-300">Tools</span>
                 </div>
 
                 <div className="flex items-center gap-3 w-full max-w-[160px]">
-                  <Circle ref={div4Ref} className="bg-violet-500/8 border-violet-400/20 flex-shrink-0 ml-16">
-                    <Database className="w-6 h-6 text-white" />
-                  </Circle>
+                  {(() => {
+                    const mlPx =
+                      screenWidth <= 325
+                        ? 8
+                        : screenWidth <= 375
+                        ? 12
+                        : screenWidth <= 425
+                        ? 16
+                        : 16;
+                    const iconSize =
+                      screenWidth <= 325
+                        ? "w-5 h-5"
+                        : screenWidth <= 375
+                        ? "w-5 h-5"
+                        : screenWidth <= 425
+                        ? "w-6 h-6"
+                        : "w-6 h-6";
+                    return (
+                      <Circle
+                        ref={div4Ref}
+                        className="bg-violet-500/8 border-violet-400/20 flex-shrink-0"
+                        style={{ marginLeft: mlPx }}
+                      >
+                        <Database className={`${iconSize} text-white`} />
+                      </Circle>
+                    );
+                  })()}
                   <span className="text-sm text-gray-300">APIs & DB</span>
                 </div>
 
                 <div className="flex items-center gap-3 w-full max-w-[160px]">
-                  <Circle ref={div5Ref} className="bg-white/5 flex-shrink-0 ml-16">
-                    <Palette className="w-6 h-6 text-white" />
-                  </Circle>
+                  {(() => {
+                    const mlPx =
+                      screenWidth <= 325
+                        ? 8
+                        : screenWidth <= 375
+                        ? 12
+                        : screenWidth <= 425
+                        ? 16
+                        : 16;
+                    const iconSize =
+                      screenWidth <= 325
+                        ? "w-5 h-5"
+                        : screenWidth <= 375
+                        ? "w-5 h-5"
+                        : screenWidth <= 425
+                        ? "w-6 h-6"
+                        : "w-6 h-6";
+                    return (
+                      <Circle
+                        ref={div5Ref}
+                        className="bg-white/5 flex-shrink-0"
+                        style={{ marginLeft: mlPx }}
+                      >
+                        <Palette className={`${iconSize} text-white`} />
+                      </Circle>
+                    );
+                  })()}
                   <span className="text-sm text-gray-300">Design</span>
                 </div>
               </div>
             </div>
 
             {/* AnimatedBeams connecting items */}
-            <AnimatedBeam containerRef={beamContainerRef} fromRef={div1Ref} toRef={div6Ref} duration={4} curvature={-24} />
-            <AnimatedBeam containerRef={beamContainerRef} fromRef={div2Ref} toRef={div6Ref} duration={4} curvature={-24} />
-            <AnimatedBeam containerRef={beamContainerRef} fromRef={div3Ref} toRef={div6Ref} duration={4} curvature={-24} />
-            <AnimatedBeam containerRef={beamContainerRef} fromRef={div4Ref} toRef={div6Ref} duration={4} curvature={-24} />
-            <AnimatedBeam containerRef={beamContainerRef} fromRef={div5Ref} toRef={div6Ref} duration={4} curvature={-24} />
-            <AnimatedBeam containerRef={beamContainerRef} fromRef={div6Ref} toRef={div7Ref} duration={4} curvature={-16} />
+            <AnimatedBeam
+              containerRef={beamContainerRef}
+              fromRef={div1Ref}
+              toRef={div6Ref}
+              duration={5}
+              curvature={isNarrow ? -12 : -24}
+            />
+            <AnimatedBeam
+              containerRef={beamContainerRef}
+              fromRef={div2Ref}
+              toRef={div6Ref}
+              duration={5}
+              curvature={isNarrow ? -12 : -24}
+            />
+            <AnimatedBeam
+              containerRef={beamContainerRef}
+              fromRef={div3Ref}
+              toRef={div6Ref}
+              duration={5}
+              curvature={isNarrow ? -12 : -24}
+            />
+            <AnimatedBeam
+              containerRef={beamContainerRef}
+              fromRef={div4Ref}
+              toRef={div6Ref}
+              duration={5}
+              curvature={isNarrow ? -12 : -24}
+            />
+            <AnimatedBeam
+              containerRef={beamContainerRef}
+              fromRef={div5Ref}
+              toRef={div6Ref}
+              duration={5}
+              curvature={isNarrow ? -12 : -24}
+            />
+            <AnimatedBeam
+              containerRef={beamContainerRef}
+              fromRef={div6Ref}
+              toRef={div7Ref}
+              duration={5}
+              curvature={isNarrow ? -8 : -16}
+            />
           </div>
 
           {/* labels are now placed beneath the corresponding icons above */}

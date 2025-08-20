@@ -1,6 +1,9 @@
 import React from "react";
 import { Link, scroller } from "react-scroll";
 import { motion } from "framer-motion";
+
+// lint-safe reference
+const _motion = motion;
 import ProfileCard from "../Main/ProfileCard";
 import TextType from "../TextType/TextType";
 
@@ -24,35 +27,47 @@ const Content = () => (
   >
     <section
       id="home"
-      className="flex items-center justify-center min-h-screen relative z-10 pt-24 pb-20"
+      className="flex items-center justify-center min-h-screen relative z-10 pt-24 pb-24"
     >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
-          {/* Left Content - Profile Card */}
-          <motion.div
-            className="flex justify-center lg:justify-start order-2 lg:order-1"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            <div className="scale-75 sm:scale-90 lg:scale-100 pt-6">
-              <ProfileCard 
-                name="Rajat Pandey"
-                title="Software Engineer"
-                handle="rajatpandey_dev"
-                status="Available for work"
-                avatarUrl="/profile1.png"
-                miniAvatarUrl="/profile1.png"
-                enableTilt={true}
-                enableMobileTilt={false}
-              />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 items-center max-w-7xl mx-auto">
+          {/* Left Content - Profile Card (wrapped so we can add a mobile CTA directly after it) */}
+          <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start md:pt-4">
+            <motion.div
+              className="flex justify-center lg:justify-start"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              <div className="scale-75 sm:scale-90 lg:scale-100 ">
+                <ProfileCard 
+                  name="Rajat Pandey"
+                  title="Software Engineer"
+                  handle="rajatpandey_dev"
+                  status="Available for work"
+                  avatarUrl="/profile1.png"
+                  miniAvatarUrl="/profile1.png"
+                  enableTilt={true}
+                  enableMobileTilt={false}
+                />
+              </div>
+            </motion.div>
+
+            {/* Mobile-only CTA placed immediately below profile card with no extra spacing */}
+            <div className="block lg:hidden">
+              <Link to="projects" smooth duration={600}>
+                <button className="cursor-pointer group bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden ">
+                  <span className="relative z-10">View My Work</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+              </Link>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content - Text */}
           <div className="text-center lg:text-left order-1 lg:order-2">
             <motion.h1
-              className="text-white text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-none"
+              className="text-white text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 leading-none"
               initial="hidden"
               animate="visible"
               custom={0}
@@ -95,9 +110,9 @@ const Content = () => (
               Passionate about creating innovative solutions that make a difference.
             </motion.p>
             
-            {/* CTA Button */}
+            {/* CTA Button (desktop/tablet) - hidden on mobile because mobile CTA is shown below the profile card */}
             <motion.div
-              className="flex justify-center lg:justify-start"
+              className="hidden lg:flex justify-center lg:justify-start pt-4"
               initial="hidden"
               animate="visible"
               custom={3}
