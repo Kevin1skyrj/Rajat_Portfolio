@@ -7,7 +7,7 @@ const useScrollSpy = () => {
   const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
-    const sectionIds = ["home", "about", "skills", "projects", "contacts"];
+    const sectionIds = ["home", "about", "skills", "projects"];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -48,7 +48,7 @@ const Navbar = () => {
     { id: "about", label: "About Me" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
-    { id: "contacts", label: "Contacts" },
+    // { id: "contacts", label: "Contacts" },
   ];
 
   return (
