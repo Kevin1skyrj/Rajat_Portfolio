@@ -116,7 +116,7 @@ const TechCard = ({ icon, name, color }) => {
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="py-20 bg-transparent">
+    <section id="tech-stack" className="py-4 bg-transparent">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
