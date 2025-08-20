@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link, scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import ProfileCard from "../Main/ProfileCard";
 import TextType from "../TextType/TextType";
@@ -103,7 +103,7 @@ const Content = () => (
               custom={3}
               variants={textVariants}
             >
-              <Link to="projects" smooth duration={1000}>
+              <Link to="projects" smooth duration={600}>
                 <button className=" cursor-pointer group bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden">
                   <span className="relative z-10">View My Work</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -120,12 +120,25 @@ const Content = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.5 }}
         >
-          <Link to="about" smooth duration={1000}>
-            <div className="h-12 w-8 border-2 border-white mx-auto rounded-full relative cursor-pointer animate-bounce hover:border-cyan-400 transition-colors">
-              <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45"></div>
-              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45 opacity-60"></div>
-            </div>
-          </Link>
+          <div
+            role="button"
+            tabIndex={0}
+            aria-label="Scroll to About"
+            onClick={(e) => {
+              e.preventDefault();
+              scroller.scrollTo("about", { smooth: true, duration: 500 });
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                scroller.scrollTo("about", { smooth: true, duration: 500 });
+              }
+            }}
+            className="h-12 w-8 border-2 border-white mx-auto rounded-full relative cursor-pointer animate-bounce active:animate-none active:scale-95 hover:border-cyan-400 transition-all focus:outline-none"
+          >
+            <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45"></div>
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-2 h-2 border-b-2 border-r-2 border-white rotate-45 opacity-60"></div>
+          </div>
         </motion.div>
       </div>
     </section>
