@@ -409,42 +409,42 @@ export default function Services() {
               containerRef={beamContainerRef}
               fromRef={div1Ref}
               toRef={div6Ref}
-              duration={5}
+              duration={3}
               curvature={isNarrow ? -12 : -24}
             />
             <AnimatedBeam
               containerRef={beamContainerRef}
               fromRef={div2Ref}
               toRef={div6Ref}
-              duration={5}
+              duration={3}
               curvature={isNarrow ? -12 : -24}
             />
             <AnimatedBeam
               containerRef={beamContainerRef}
               fromRef={div3Ref}
               toRef={div6Ref}
-              duration={5}
+              duration={3}
               curvature={isNarrow ? -12 : -24}
             />
             <AnimatedBeam
               containerRef={beamContainerRef}
               fromRef={div4Ref}
               toRef={div6Ref}
-              duration={5}
+              duration={3}
               curvature={isNarrow ? -12 : -24}
             />
             <AnimatedBeam
               containerRef={beamContainerRef}
               fromRef={div5Ref}
               toRef={div6Ref}
-              duration={5}
+              duration={3}
               curvature={isNarrow ? -12 : -24}
             />
             <AnimatedBeam
               containerRef={beamContainerRef}
               fromRef={div6Ref}
               toRef={div7Ref}
-              duration={5}
+              duration={3}
               curvature={isNarrow ? -8 : -16}
             />
           </div>
