@@ -1,125 +1,175 @@
-import { cn } from "@/lib/utils";
-import { Marquee } from "@/components/magicui/marquee";
+"use client";
+import React, { useEffect, useRef } from 'react';
 
-const technologies = [
-  {
-    name: "HTML5",
-    icon: "/techstack icons/html5.svg",
-    color: "bg-orange-500/20",
-  },
-  {
-    name: "CSS3",
-    icon: "/techstack icons/css3.svg",
-    color: "bg-blue-500/20",
-  },
-  {
-    name: "JavaScript",
-    icon: "/techstack icons/javascript.svg",
-    color: "bg-yellow-500/20",
-  },
-  {
-    name: "React",
-    icon: "/techstack icons/react.svg",
-    color: "bg-cyan-500/20",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "/techstack icons/tailwindcss.svg",
-    color: "bg-teal-500/20",
-  },
-  {
-    name: "Vite",
-    icon: "/techstack icons/vite.svg",
-    color: "bg-purple-500/20",
-  },
-  {
-    name: "Node.js",
-    icon: "/techstack icons/nodejs.svg",
-    color: "bg-green-500/20",
-  },
-  {
-    name: "Express",
-    icon: "/techstack icons/express.svg",
-    color: "bg-gray-500/20",
-  },
-  {
-    name: "MongoDB",
-    icon: "/techstack icons/mongo.svg",
-    color: "bg-green-600/20",
-  },
-  {
-    name: "Firebase",
-    icon: "/techstack icons/firebase.svg",
-    color: "bg-amber-500/20",
-  },
-  {
-    name: "Git",
-    icon: "/techstack icons/git-icon.svg",
-    color: "bg-red-500/20",
-  },
-  {
-    name: "GitHub",
-    icon: "/techstack icons/github.svg",
-    color: "bg-gray-600/20",
-  },
-  {
-    name: "VS Code",
-    icon: "/techstack icons/vs-code.svg",
-    color: "bg-blue-600/20",
-  },
-  {
-    name: "Figma",
-    icon: "/techstack icons/figma.svg",
-    color: "bg-purple-600/20",
-  },
-  {
-    name: "Netlify",
-    icon: "/techstack icons/netlify.svg",
-    color: "bg-teal-600/20",
-  },
-  {
-    name: "Vercel",
-    icon: "/techstack icons/vercel.svg",
-    color: "bg-black/20",
-  },
-];
+const TechStack = () => {
+  const firstRowRef = useRef(null);
+  const secondRowRef = useRef(null);
+  
+  // Use refs for pause state to avoid re-renders during animation
+  const isFirstRowPaused = useRef(false);
+  const isSecondRowPaused = useRef(false);
+  
+  // Animation refs for cleanup
+  const firstRowAnimationId = useRef(null);
+  const secondRowAnimationId = useRef(null);
 
-// Split technologies into two rows with exactly 8 icons each
-const firstRow = technologies.slice(0, 8);
-const secondRow = technologies.slice(8, 16);
+  const technologies = [
+    {
+      id: 1,
+      name: "HTML5",
+      icon: "/techstack icons/html5.svg",
+      color: "bg-orange-500/20",
+    },
+    {
+      id: 2,
+      name: "CSS3",
+      icon: "/techstack icons/css3.svg",
+      color: "bg-blue-500/20",
+    },
+    {
+      id: 3,
+      name: "JavaScript",
+      icon: "/techstack icons/javascript.svg",
+      color: "bg-yellow-500/20",
+    },
+    {
+      id: 4,
+      name: "React",
+      icon: "/techstack icons/react.svg",
+      color: "bg-cyan-500/20",
+    },
+    {
+      id: 5,
+      name: "Tailwind CSS",
+      icon: "/techstack icons/tailwindcss.svg",
+      color: "bg-teal-500/20",
+    },
+    {
+      id: 6,
+      name: "Vite",
+      icon: "/techstack icons/vite.svg",
+      color: "bg-purple-500/20",
+    },
+    {
+      id: 7,
+      name: "Node.js",
+      icon: "/techstack icons/nodejs.svg",
+      color: "bg-green-500/20",
+    },
+    {
+      id: 8,
+      name: "Express",
+      icon: "/techstack icons/express.svg",
+      color: "bg-gray-500/20",
+    },
+  ];
 
-const TechCard = ({ icon, name, color }) => {
+  const secondRowTechs = [
+    {
+      id: 9,
+      name: "MongoDB",
+      icon: "/techstack icons/mongo.svg",
+      color: "bg-green-600/20",
+    },
+    {
+      id: 10,
+      name: "Firebase",
+      icon: "/techstack icons/firebase.svg",
+      color: "bg-amber-500/20",
+    },
+    {
+      id: 11,
+      name: "Git",
+      icon: "/techstack icons/git-icon.svg",
+      color: "bg-red-500/20",
+    },
+    {
+      id: 12,
+      name: "GitHub",
+      icon: "/techstack icons/github.svg",
+      color: "bg-gray-600/20",
+    },
+    {
+      id: 13,
+      name: "VS Code",
+      icon: "/techstack icons/vs-code.svg",
+      color: "bg-blue-600/20",
+    },
+    {
+      id: 14,
+      name: "Figma",
+      icon: "/techstack icons/figma.svg",
+      color: "bg-purple-600/20",
+    },
+    {
+      id: 15,
+      name: "Netlify",
+      icon: "/techstack icons/netlify.svg",
+      color: "bg-teal-600/20",
+    },
+    {
+      id: 16,
+      name: "Vercel",
+      icon: "/techstack icons/vercel.svg",
+      color: "bg-black/20",
+    },
+  ];
+
+  // Create multiple sets for truly infinite scroll
+  const infiniteFirstRow = [...technologies, ...technologies, ...technologies, ...technologies];
+  const infiniteSecondRow = [...secondRowTechs, ...secondRowTechs, ...secondRowTechs, ...secondRowTechs];
+
+  useEffect(() => {
+    const firstRowCarousel = firstRowRef.current;
+    const secondRowCarousel = secondRowRef.current;
+    if (!firstRowCarousel || !secondRowCarousel) return;
+
+    let firstRowPosition = 0, secondRowPosition = 0;
+    const speed = 0.5;
+    const cardWidth = 180; // Card width + margin
+    const resetPoint = -(cardWidth * technologies.length);
+
+    const animateFirstRow = () => {
+      if (!isFirstRowPaused.current) {
+        firstRowPosition -= speed;
+        
+        if (firstRowPosition <= resetPoint) {
+          firstRowPosition = 0;
+        }
+        
+        firstRowCarousel.style.transform = `translateX(${firstRowPosition}px)`;
+      }
+      firstRowAnimationId.current = requestAnimationFrame(animateFirstRow);
+    };
+
+    const animateSecondRow = () => {
+      if (!isSecondRowPaused.current) {
+        secondRowPosition += speed; // Reverse direction
+        
+        if (secondRowPosition >= 0) {
+          secondRowPosition = resetPoint;
+        }
+        
+        secondRowCarousel.style.transform = `translateX(${secondRowPosition}px)`;
+      }
+      secondRowAnimationId.current = requestAnimationFrame(animateSecondRow);
+    };
+
+    // Start animations
+    animateFirstRow();
+    animateSecondRow();
+
+    return () => {
+      cancelAnimationFrame(firstRowAnimationId.current);
+      cancelAnimationFrame(secondRowAnimationId.current);
+    };
+  }, [technologies.length]);
+
   return (
-    <div
-      className={cn(
-        "relative flex h-32 w-40 cursor-pointer items-center justify-center rounded-xl border p-4 flex-shrink-0",
-        "border-gray-200/20 bg-gray-900/40 backdrop-blur-sm",
-        "hover:bg-gray-800/60 hover:scale-105 transition-all duration-300",
-        "group"
-      )}
-    >
-      <div className="flex flex-col items-center gap-3">
-        <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center", color)}>
-          <img
-            src={icon}
-            alt={name}
-            className="w-12 h-12 object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
-          />
-        </div>
-        <span className="text-sm font-medium text-gray-200 text-center leading-tight">
-          {name}
-        </span>
-      </div>
-    </div>
-  );
-};
-
-export default function TechStack() {
-  return (
-    <section id="tech-stack" className="py-4 bg-transparent">
+    <section id="tech-stack" className="py-16 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cyan-400">
             My Tech Stack
           </h2>
@@ -130,43 +180,80 @@ export default function TechStack() {
         </div>
 
         {/* Marquee Container */}
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg ">
+        <div className="bg-transparent rounded-2xl mx-0 md:mx-0 overflow-hidden">
           {/* First Row - Left to Right */}
-          <div className="w-full mb-6">
-            <Marquee 
-              pauseOnHover 
-              className="[--duration:25s] [--gap:1rem]" 
-              repeat={4}
+          <div 
+            className="overflow-hidden w-full bg-transparent py-6"
+            onMouseEnter={() => (isFirstRowPaused.current = true)}
+            onMouseLeave={() => (isFirstRowPaused.current = false)}
+          >
+            <div 
+              ref={firstRowRef}
+              className="flex transition-none will-change-transform"
             >
-              <div className="flex flex-row gap-4">
-                {firstRow.map((tech, index) => (
-                  <TechCard key={`first-${tech.name}-${index}`} {...tech} />
-                ))}
-              </div>
-            </Marquee>
+              {infiniteFirstRow.map((tech, index) => (
+                <div 
+                  key={`first-${tech.id}-${index}`}
+                  className="bg-white/10 backdrop-blur-md rounded-xl mx-3 shadow-md border border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl h-32 w-40 flex items-center justify-center flex-shrink-0 group cursor-pointer"
+                >
+                  <div className="flex flex-col items-center gap-3 p-4">
+                    <div className={`w-16 h-16 rounded-xl flex items-center justify-center ${tech.color}`}>
+                      <img 
+                        src={tech.icon} 
+                        alt={tech.name}
+                        className="w-12 h-12 object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="text-sm font-medium text-white text-center leading-tight">
+                      {tech.name}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Second Row - Right to Left */}
-          <div className="w-full">
-            <Marquee 
-              reverse 
-              pauseOnHover 
-              className="[--duration:25s] [--gap:1rem]" 
-              repeat={4}
+          <div 
+            className="overflow-hidden w-full bg-transparent py-6"
+            onMouseEnter={() => (isSecondRowPaused.current = true)}
+            onMouseLeave={() => (isSecondRowPaused.current = false)}
+          >
+            <div 
+              ref={secondRowRef}
+              className="flex transition-none will-change-transform"
             >
-              <div className="flex flex-row gap-4">
-                {secondRow.map((tech, index) => (
-                  <TechCard key={`second-${tech.name}-${index}`} {...tech} />
-                ))}
-              </div>
-            </Marquee>
+              {infiniteSecondRow.map((tech, index) => (
+                <div 
+                  key={`second-${tech.id}-${index}`}
+                  className="bg-white/10 backdrop-blur-md rounded-xl mx-3 shadow-md border border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl h-32 w-40 flex items-center justify-center flex-shrink-0 group cursor-pointer"
+                >
+                  <div className="flex flex-col items-center gap-3 p-4">
+                    <div className={`w-16 h-16 rounded-xl flex items-center justify-center ${tech.color}`}>
+                      <img 
+                        src={tech.icon} 
+                        alt={tech.name}
+                        className="w-12 h-12 object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="text-sm font-medium text-white text-center leading-tight">
+                      {tech.name}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-
-          {/* Fade Gradients */}
-          {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-gray-900/80 to-transparent"></div> */}
         </div>
+
+        {/* Background decorative elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-cyan-400/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-blue-600/10 rounded-full blur-xl"></div>
       </div>
     </section>
   );
-}
+};
+
+export default TechStack;
