@@ -56,7 +56,7 @@ const Navbar = () => {
       <ScrollGradientLine />
       <div className="flex items-center justify-center h-20 px-6 pt-4">
         {/* Desktop - Compact centered container */}
-        <div className="hidden md:flex items-center gap-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-8 py-3 min-w-fit">
+        <div className="hidden md:flex items-center gap-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-8 py-2 min-w-fit">
           {/* Logo */}
           <a href="#home" className="flex-shrink-0">
             <img

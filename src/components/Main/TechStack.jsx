@@ -166,10 +166,10 @@ const TechStack = () => {
   }, [technologies.length]);
 
   return (
-    <section id="tech-stack" className="py-16 bg-transparent relative overflow-hidden">
+    <section id="tech-stack" className="py-4 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-cyan-400">
             My Tech Stack
           </h2>
@@ -180,7 +180,7 @@ const TechStack = () => {
         </div>
 
         {/* Marquee Container */}
-        <div className="bg-transparent rounded-2xl mx-0 md:mx-0 overflow-hidden">
+        <div className="bg-transparent rounded-2xl mx-0 md:mx-0 overflow-hidden mb-6">
           {/* First Row - Left to Right */}
           <div 
             className="overflow-hidden w-full bg-transparent py-6"
