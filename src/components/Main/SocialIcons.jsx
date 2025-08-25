@@ -8,10 +8,10 @@ const SocialIcons = ({
   socialLinks = {
     gmail: "",
     whatsapp: "",
-    instagram: "",
+    instagram: "https://www.instagram.com/rajatpandey2584/",
     telegram: "",
-    linkedin: "",
-    github: "",
+    linkedin: "https://www.linkedin.com/in/rajatpandey24/",
+    github: "https://github.com/Kevin1skyrj",
   },
   enableAOS = true,
   
